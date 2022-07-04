@@ -5,6 +5,8 @@ import util
 
 from ipdb import set_trace as debug
 
+from models.toy_model.Toy import build_toy
+
 def build(opt, dyn, direction):
     print(util.magenta("build {} policy...".format(direction)))
 
@@ -26,12 +28,7 @@ def _build_net(opt, net_name):
     compute_sigma = lambda t: sde.compute_sigmas(t, opt.sigma_min, opt.sigma_max)
     zero_out_last_layer = False
 
-    if net_name == 'toy':
-        assert util.is_toy_dataset(opt)
-        from models.toy_model.Toy import build_toy
-        net = build_toy(zero_out_last_layer)
-    else:
-        raise RuntimeError()
+    net = build_toy(zero_out_last_layer)
     return net
 
 class SchrodingerBridgePolicy(torch.nn.Module):

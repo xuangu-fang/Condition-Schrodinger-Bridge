@@ -75,7 +75,7 @@ def compute_div_gz(opt, dyn, ts, xs, policy, return_zs=False):
     zs = policy(xs, ts)
     """ Wei: dyn is dynamics from SDE (default ve_diffusions) """
     g_ts = dyn.g(ts)
-    g_ts = g_ts[:, None, None, None] if util.is_image_dataset(opt) else g_ts[:, None]
+    g_ts = g_ts[:, None]
     gzs = g_ts * zs
     e = sample_e(opt, xs)
     e_dzdx = torch.autograd.grad(gzs, xs, e, create_graph=True)[0]
@@ -143,7 +143,6 @@ class Runner():
             raise RuntimeError()
 
     def sb_joint_train(self, opt):
-        assert not util.is_image_dataset(opt)
         policy_f, policy_b = self.z_f, self.z_b
         policy_f = activate_policy(policy_f)
         policy_b = activate_policy(policy_b)
