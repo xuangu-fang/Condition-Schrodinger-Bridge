@@ -125,17 +125,6 @@ class Moon:
         x = np.concatenate([u, v], axis=0)
         return torch.Tensor(x)
 
-class DataSampler: # a dump data sampler
-    def __init__(self, dataset, batch_size, device):
-        self.num_sample = len(dataset)
-        self.dataloader = setup_loader(dataset, batch_size)
-        self.batch_size = batch_size
-        self.device = device
-
-    def sample(self):
-        data = next(self.dataloader)
-        return data[0].to(self.device)
-
 class PriorSampler: # a dump prior sampler to align with DataSampler
     def __init__(self, prior, batch_size, device):
         self.prior = prior
@@ -147,43 +136,3 @@ class PriorSampler: # a dump prior sampler to align with DataSampler
 
     def sample(self):
         return self.prior.sample([self.batch_size]).to(self.device)
-
-def setup_loader(dataset, batch_size):
-    train_loader = DataLoaderX(dataset, batch_size=batch_size,shuffle=True,num_workers=0,drop_last=True)
-    # train_loader = DataLoaderX(dataset, batch_size=batch_size,shuffle=True,num_workers=4, pin_memory=True)
-    print("number of samples: {}".format(len(dataset)))
-
-    # https://github.com/openai/improved-diffusion/blob/main/improved_diffusion/image_datasets.py#L52-L53
-    # https://github.com/openai/improved-diffusion/blob/main/improved_diffusion/train_util.py#L166
-    while True:
-        yield from train_loader
-
-class DataLoaderX(DataLoader):
-    def __iter__(self):
-        return BackgroundGenerator(super().__iter__())
-
-def generate_celebA_dataset(opt,load_train=True):
-    if opt.problem_name=='celebA32': #Our own data preprocessing
-        transforms_list=[
-            transforms.Resize(32),
-            transforms.CenterCrop(32),
-            transforms.RandomHorizontalFlip(p=0.5),
-            transforms.ToTensor(),
-        ]
-    elif opt.problem_name=='celebA64':
-        transforms_list=[ #Normal Data preprocessing
-            transforms.Resize([64,64]), #DSB type resizing
-            transforms.RandomHorizontalFlip(p=0.5),
-            transforms.ToTensor(),
-        ]
-    else:
-        raise RuntimeError()
-
-    if util.use_vp_sde(opt):
-        transforms_list+=[transforms.Lambda(lambda t: (t * 2) - 1),]
-
-    return datasets.ImageFolder(
-        root='data/celebA/img_align_celeba/',
-        transform=transforms.Compose(transforms_list)
-    )
-
