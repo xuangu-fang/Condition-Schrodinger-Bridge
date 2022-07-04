@@ -194,13 +194,6 @@ class Runner():
         ))
     def log_sb_joint_train(self, opt, it, loss, optimizer, num_itr):
         self._print_train_itr(it, loss, optimizer, num_itr, name='SB joint')
-        if opt.log_tb:
-            step = self.update_count('backward')
-            self.log_tb(step, loss.detach(), 'loss', 'SB_joint')
-
-    def log_tb(self, step, val, name, tag):
-        print('what is this log_tb', tag, name, val, step)
-        self.writer.add_scalar(os.path.join(tag,name), val, global_step=step)
 
 
 print(util.yellow("======================================================="))
