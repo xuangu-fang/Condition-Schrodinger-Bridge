@@ -73,7 +73,7 @@ class Circle:
         self.batch_size = batch_size
 
     def sample(self):
-        return torch.Tensor(normalize((datasets.make_circles(n_samples=self.batch_size, factor=0.4, noise=noise)[0])))
+        return torch.Tensor(normalize((datasets.make_circles(n_samples=self.batch_size, factor=0.4, noise=0)[0])))
 
 class Pinwheel:
     def __init__(self, batch_size):
