@@ -2,14 +2,12 @@ import torch
 import torch.nn as nn
 from models.utils import *
 
-def build_toy(zero_out_last_layer):
-    return ToyPolicy(zero_out_last_layer=zero_out_last_layer)
 
 class ToyPolicy(torch.nn.Module):
-    def __init__(self, data_dim=2, hidden_dim=256, time_embed_dim=128, zero_out_last_layer=False):
+    def __init__(self, data_dim=2, hidden_dim=256, blocks=3, zero_out_last_layer=False):
         super(ToyPolicy,self).__init__()
 
-        self.time_embed_dim = time_embed_dim
+        self.time_embed_dim = hidden_dim // 2
         self.zero_out_last_layer = zero_out_last_layer
         hid = hidden_dim
 
@@ -19,7 +17,7 @@ class ToyPolicy(torch.nn.Module):
             nn.Linear(hid, hid),
         )
 
-        self.x_module = ResNet_FC(data_dim, hidden_dim, num_res_blocks=3)
+        self.x_module = ResNet_FC(data_dim, hidden_dim, num_res_blocks=blocks)
 
         self.out_module = nn.Sequential(
             nn.Linear(hid,hid),

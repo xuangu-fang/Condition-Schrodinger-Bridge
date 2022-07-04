@@ -21,22 +21,26 @@ def get_default_configs():
     config.t0 = 0
     config.problem_name = 'gmm'
     config.num_itr = 2000
-    config.eval_itr = 400
+    config.eval_itr = 200
     config.forward_net = 'toy'
     config.backward_net = 'toy'
 
     # sampling
     #config.samp_bs = 1000 # cantor server doesn't support large batch size
-    config.samp_bs = 640
+    config.samp_bs = 200
     config.sigma_min = 0.01
-    config.sigma_max = 5
+    config.sigma_max = 10
 
     # optimization
     # config.optim = optim = ml_collections.ConfigDict()
     config.weight_decay = 0
     config.optimizer = 'AdamW'
-    config.lr = 1e-4
+    config.lr = 5e-4
     config.lr_gamma = 0.9
+
+    # network structure
+    config.hidden_nodes = 128 #256
+    config.blocks = 2 #3
 
     model_configs=None
     return config, model_configs
