@@ -48,12 +48,14 @@ def unflatten_dim01(x, dim01):
     # (dim0x1, *dim2) --> (dim0, dim1, *dim2)
     return x.reshape(*dim01, *x.shape[1:])
 
+'''
 def compute_z_norm(zs, dt):
     # Given zs.shape = [batch, timesteps, *z_dim], return E[\int 0.5*norm(z)*dt],
     # where the norm is taken over z_dim, the integral is taken over timesteps,
     # and the expectation is taken over batch.
     zs = zs.reshape(*zs.shape[:2],-1)
     return 0.5 * zs.norm(dim=2).sum(dim=1).mean(dim=0) * dt
+'''
 
 def save_toy_npy_traj(opt, fn, traj, n_snapshot=None, direction=None):
     #form of traj: [bs, interval, x_dim=2]
