@@ -66,7 +66,7 @@ class Moon:
         self.batch_size = batch_size
 
     def sample(self):
-        return torch.Tensor(normalize(datasets.make_moons(n_samples=self.batch_size, noise=noise)[0]))
+        return torch.Tensor(normalize(datasets.make_moons(n_samples=self.batch_size, noise=0)[0]))
 
 class Circle:
     def __init__(self, batch_size):
