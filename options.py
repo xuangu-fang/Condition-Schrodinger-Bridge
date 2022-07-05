@@ -35,8 +35,8 @@ def get_default_configs():
     # config.optim = optim = ml_collections.ConfigDict()
     config.weight_decay = 0
     config.optimizer = 'AdamW'
-    config.lr = 1e-3
-    config.lr_gamma = 0.9
+    config.lr = 2e-3
+    config.lr_gamma = 0.5
 
     # network structure
     config.hidden_nodes = 64 # 128 #256
@@ -80,7 +80,7 @@ def set():
     parser.add_argument("--lr-f",           type=float, default=None,     help="learning rate for forward network")
     parser.add_argument("--lr-b",           type=float, default=None,     help="learning rate for backward network")
     parser.add_argument("--lr-gamma",       type=float, default=1.0,      help="learning rate decay ratio")
-    parser.add_argument("--lr-step",        type=int,   default=1000,     help="learning rate decay step size")
+    parser.add_argument("--lr-step",        type=int,   default=500,     help="learning rate decay step size")
     parser.add_argument("--l2-norm",        type=float, default=0.0,      help="weight decay rate")
     parser.add_argument("--optimizer",      type=str,   default='AdamW',  help="optmizer")
     parser.add_argument("--grad-clip",      type=float, default=None,     help="clip the gradient")
