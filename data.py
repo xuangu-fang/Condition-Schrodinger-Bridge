@@ -57,9 +57,10 @@ class Scurve:
 class Spiral:
     def __init__(self, batch_size):
         self.batch_size = batch_size
+        self.samples = normalize_both(datasets.make_swiss_roll(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]])
 
     def sample(self):
-        return torch.Tensor(normalize_both(datasets.make_swiss_roll(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]]))
+        return torch.Tensor(self.samples)
 
 class Moon:
     def __init__(self, batch_size):
