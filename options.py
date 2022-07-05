@@ -35,11 +35,11 @@ def get_default_configs():
     # config.optim = optim = ml_collections.ConfigDict()
     config.weight_decay = 0
     config.optimizer = 'AdamW'
-    config.lr = 2e-3
+    config.lr = 4e-3
     config.lr_gamma = 0.5
 
     # network structure
-    config.hidden_nodes = 64 # 128 #256
+    config.hidden_nodes = 128 #256
     config.blocks = 2 #3
 
     model_configs=None
