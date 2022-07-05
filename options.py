@@ -19,7 +19,7 @@ def get_default_configs():
     config.interval = 100
     config.train_method = 'joint'
     config.t0 = 0
-    config.problem_name = 'gmm'
+    #config.problem_name = 'gmm'
     config.num_itr = 2000
     config.eval_itr = 500
     config.forward_net = 'toy'
