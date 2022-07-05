@@ -175,7 +175,7 @@ class Runner():
             if (it + 1) % opt.eval_itr == 0:
                 with torch.no_grad():
                     xs_b, _, _ = self.dyn.sample_traj(ts, policy_b, save_traj=True)
-                util.save_toy_npy_traj(opt, 'train_{}_lr_{}_sigma_{}_node_{}_block_{}_it{}_seed_{}_fixed_sample'.format(opt.problem_name, opt.lr, opt.sigma_max, opt.hidden_nodes, opt.blocks, it+1, opt.seed), xs_b.detach().cpu().numpy())
+                util.save_toy_npy_traj(opt, 'train_{}_lr_{}_sigma_{}_node_{}_block_{}_batch_{}_it{}_seed_{}_fixed_sample'.format(opt.problem_name, opt.lr, opt.sigma_max, opt.hidden_nodes, opt.blocks, opt.samp_bs, it+1, opt.seed), xs_b.detach().cpu().numpy())
 
     def _print_train_itr(self, it, loss, optimizer, num_itr, name):
         time_elapsed = util.get_time(time.time()-self.start_time)
