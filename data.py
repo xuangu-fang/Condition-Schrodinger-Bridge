@@ -49,9 +49,10 @@ def normalize_both(xs):
 class Scurve:
     def __init__(self, batch_size):
         self.batch_size = batch_size
+        self.samples = normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]])
 
     def sample(self):
-        return torch.Tensor(normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]]))
+        return torch.Tensor(self.samples)
       
 
 class Spiral:
@@ -65,22 +66,22 @@ class Spiral:
 class Moon:
     def __init__(self, batch_size):
         self.batch_size = batch_size
+        self.samples = normalize(datasets.make_moons(n_samples=self.batch_size, noise=0)[0])
 
     def sample(self):
-        return torch.Tensor(normalize(datasets.make_moons(n_samples=self.batch_size, noise=0)[0]))
+        return torch.Tensor(self.samples)
 
 class Circle:
     def __init__(self, batch_size):
         self.batch_size = batch_size
+        self.samples = normalize((datasets.make_circles(n_samples=self.batch_size, factor=0.4, noise=0)[0]))
 
     def sample(self):
-        return torch.Tensor(normalize((datasets.make_circles(n_samples=self.batch_size, factor=0.4, noise=0)[0])))
+        return torch.Tensor(self.samples)
 
 class Pinwheel:
     def __init__(self, batch_size):
         self.batch_size = batch_size
-
-    def sample(self):
         radial_std = 0.3
         tangential_std = 0.1
         num_classes = 5
@@ -95,9 +96,11 @@ class Pinwheel:
 
         angles = rads[labels] + rate * np.exp(features[:, 0])
         rotations = np.stack([np.cos(angles), -np.sin(angles), np.sin(angles), np.cos(angles)])
-        rotations = np.reshape(rotations.T, (-1, 2, 2))    
-        samples = normalize(np.random.permutation(np.einsum("ti,tij->tj", features, rotations)))
-        return torch.Tensor(samples)
+        rotations = np.reshape(rotations.T, (-1, 2, 2))
+        self.samples = normalize(np.random.permutation(np.einsum("ti,tij->tj", features, rotations)))
+               
+    def sample(self):
+        return torch.Tensor(self.samples)
 
 class PriorSampler: # a dump prior sampler to align with DataSampler
     def __init__(self, prior, batch_size, device):
