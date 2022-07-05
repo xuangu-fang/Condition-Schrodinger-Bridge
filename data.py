@@ -51,7 +51,6 @@ class Scurve:
         self.batch_size = batch_size
 
     def sample(self):
-        print('why does it .... run every iteration')
         return torch.Tensor(normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]]))
       
 
