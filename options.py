@@ -29,13 +29,13 @@ def get_default_configs():
     #config.samp_bs = 1000 # cantor server doesn't support large batch size
     config.samp_bs = 200
     config.sigma_min = 0.01
-    config.sigma_max = 10
+    config.sigma_max = 3
 
     # optimization
     # config.optim = optim = ml_collections.ConfigDict()
     config.weight_decay = 0
     config.optimizer = 'AdamW'
-    config.lr = 5e-4
+    config.lr = 1e-2
     config.lr_gamma = 0.9
 
     # network structure
