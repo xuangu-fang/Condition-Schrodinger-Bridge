@@ -176,7 +176,7 @@ class Runner():
                 with torch.no_grad():
                     xs_b, _, _ = self.dyn.sample_traj(ts, policy_b, save_traj=True)
                 util.save_toy_npy_traj(opt, f'{SYNTAX}_it{it+1}', xs_b.detach().cpu().numpy())
-        with open(f'./results/{SYNTAX}_baseline', 'wb') as f:
+        with open(f'./results/{SYNTAX}_baseline.npy', 'wb') as f:
             np.save(f, self.p.samples)
 
     def _print_train_itr(self, it, loss, optimizer, num_itr, name):
