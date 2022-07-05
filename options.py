@@ -20,8 +20,8 @@ def get_default_configs():
     config.train_method = 'joint'
     config.t0 = 0
     #config.problem_name = 'gmm'
-    config.num_itr = 2000
-    config.eval_itr = 500
+    config.num_itr = 1000
+    config.eval_itr = 1000
     config.forward_net = 'toy'
     config.backward_net = 'toy'
 
@@ -40,7 +40,7 @@ def get_default_configs():
 
     # network structure
     config.hidden_nodes = 128
-    config.blocks = 3
+    config.blocks = 1
 
     model_configs=None
     return config, model_configs
@@ -69,18 +69,22 @@ def set():
     parser.add_argument("--sigma-max",      type=float, default=50,       help="max diffusion for VESDE")
     parser.add_argument("--sigma-min",      type=float, default=0.01,     help="min diffusion for VESDE")
 
+    parser.add_argument("--hidden_nodes",   type=int, default=128,        help="hidden nodes")
+    parser.add_argument("--blocks",         type=int, default=2,          help="NN layers")
+
+
     # --------------- SB training & sampling (corrector) ---------------
     parser.add_argument("--train-method",   type=str, default=None,       help="algorithm for training SB" )
     parser.add_argument("--eval-itr",       type=int, default=200,        help="[sb joint train] frequency of evaluation")
-    parser.add_argument("--samp-bs",        type=int,                     help="[sb train] batch size for all trajectory sampling purposes")
-    parser.add_argument("--num-itr",        type=int,                     help="[sb train] number of training iterations (for each epoch)")
+    parser.add_argument("--samp_bs",        type=int,                     help="[sb train] batch size for all trajectory sampling purposes")
+    parser.add_argument("--num_itr",        type=int,                     help="[sb train] number of training iterations (for each epoch)")
 
     # --------------- optimizer and loss ---------------
     parser.add_argument("--lr",             type=float,                   help="learning rate")
     parser.add_argument("--lr-f",           type=float, default=None,     help="learning rate for forward network")
     parser.add_argument("--lr-b",           type=float, default=None,     help="learning rate for backward network")
-    parser.add_argument("--lr-gamma",       type=float, default=1.0,      help="learning rate decay ratio")
-    parser.add_argument("--lr-step",        type=int,   default=500,     help="learning rate decay step size")
+    parser.add_argument("--lr_gamma",       type=float, default=1.0,      help="learning rate decay ratio")
+    parser.add_argument("--lr_step",        type=int,   default=500,     help="learning rate decay step size")
     parser.add_argument("--l2-norm",        type=float, default=0.0,      help="weight decay rate")
     parser.add_argument("--optimizer",      type=str,   default='AdamW',  help="optmizer")
     parser.add_argument("--grad-clip",      type=float, default=None,     help="clip the gradient")

@@ -152,7 +152,7 @@ class Runner():
 
         ts      = self.ts
         batch_x = opt.samp_bs
-
+        SYNTAX = f'{opt.problem_name}_lr_{opt.lr}_decay_{opt.lr_gamma}_sigma_{opt.sigma_max}_node_{opt.hidden_nodes}_block_{opt.blocks}_batch_{opt.samp_bs}_seed_{opt.seed}'
         for it in range(opt.num_itr):
 
             optimizer_f.zero_grad()
@@ -175,11 +175,9 @@ class Runner():
             if (it + 1) % opt.eval_itr == 0:
                 with torch.no_grad():
                     xs_b, _, _ = self.dyn.sample_traj(ts, policy_b, save_traj=True)
-
-                util.save_toy_npy_traj(opt, 'train_{}_lr_{}_sigma_{}_node_{}_block_{}_batch_{}_it{}_seed_{}_fixed_sample'.format(opt.problem_name, opt.lr, opt.sigma_max, opt.hidden_nodes, opt.blocks, opt.samp_bs, it+1, opt.seed), xs_b.detach().cpu().numpy())
-        with open(f'./results/train_{opt.problem_name}_lr_{opt.lr}_sigma_{opt.sigma_max}_node_{opt.hidden_nodes}_block_{opt.blocks}_batch_{opt.samp_bs}_baseline_seed_{opt.seed}_fixed_sample.npy', 'wb') as f:
+                util.save_toy_npy_traj(opt, f'{SYNTAX}_it{it+1}', xs_b.detach().cpu().numpy())
+        with open(f'./results/{SYNTAX}_baseline', 'wb') as f:
             np.save(f, self.p.samples)
-        #util.save_toy_npy_traj(opt, 'train_{}_lr_{}_sigma_{}_node_{}_block_{}_batch_{}_baseline_seed_{}_fixed_sample'.format(opt.problem_name, opt.lr, opt.sigma_max, opt.hidden_nodes, opt.blocks, opt.samp_bs, opt.seed), self.p.samples)
 
     def _print_train_itr(self, it, loss, optimizer, num_itr, name):
         time_elapsed = util.get_time(time.time()-self.start_time)
