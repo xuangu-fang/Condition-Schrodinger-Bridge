@@ -20,7 +20,7 @@ def get_default_configs():
     config.train_method = 'joint'
     config.t0 = 0
     config.problem_name = 'gmm'
-    config.num_itr = 1000
+    config.num_itr = 2000
     config.eval_itr = 500
     config.forward_net = 'toy'
     config.backward_net = 'toy'
@@ -35,11 +35,11 @@ def get_default_configs():
     # config.optim = optim = ml_collections.ConfigDict()
     config.weight_decay = 0
     config.optimizer = 'AdamW'
-    config.lr = 1e-2
+    config.lr = 1e-3
     config.lr_gamma = 0.9
 
     # network structure
-    config.hidden_nodes = 128 #256
+    config.hidden_nodes = 64 # 128 #256
     config.blocks = 2 #3
 
     model_configs=None
