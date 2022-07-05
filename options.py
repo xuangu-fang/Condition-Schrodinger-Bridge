@@ -27,7 +27,7 @@ def get_default_configs():
 
     # sampling
     #config.samp_bs = 1000 # cantor server doesn't support large batch size
-    config.samp_bs = 800
+    config.samp_bs = 500
     config.sigma_min = 0.01
     config.sigma_max = 0.3
 
