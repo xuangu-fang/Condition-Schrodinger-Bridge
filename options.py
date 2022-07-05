@@ -39,8 +39,8 @@ def get_default_configs():
     config.lr_gamma = 0.5
 
     # network structure
-    config.hidden_nodes = 128 #256
-    config.blocks = 2 #3
+    config.hidden_nodes = 128
+    config.blocks = 3
 
     model_configs=None
     return config, model_configs
