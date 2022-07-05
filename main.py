@@ -156,7 +156,6 @@ class Runner():
 
             optimizer_f.zero_grad()
             optimizer_b.zero_grad()
-
             xs_f, zs_f, x_term_f = self.dyn.sample_traj(ts, policy_f, save_traj=True)
             xs_f = util.flatten_dim01(xs_f)
             zs_f = util.flatten_dim01(zs_f)
@@ -165,14 +164,12 @@ class Runner():
                 opt, batch_x, self.dyn, _ts, xs_f, zs_f, x_term_f, policy_b
             )
             loss.backward()
-
             optimizer_f.step()
             optimizer_b.step()
 
             if sched_f is not None: sched_f.step()
             if sched_b is not None: sched_b.step()
             self.log_sb_joint_train(opt, it, loss, optimizer_f, opt.num_itr)
-
             # evaluate
             if (it + 1) % opt.eval_itr == 0:
                 with torch.no_grad():

@@ -63,13 +63,10 @@ class BaseSDE(metaclass=abc.ABCMeta):
         _assert_increasing('ts', ts)
         init_dist = self.p if direction=='forward' else self.q
         ts = ts if direction=='forward' else torch.flip(ts, dims=[0])
-
         x = init_dist.sample() # [bs, x_dim]
-
 
         xs = torch.empty((x.shape[0], len(ts), *x.shape[1:])) if save_traj else None
         zs = torch.empty_like(xs) if save_traj else None
-
         # don't use tqdm for fbsde since it'll resample every itr
         _ts = ts if opt.train_method=='joint' else tqdm(ts,desc=util.yellow("Propagating Dynamics..."))
         for idx, t in enumerate(_ts):
