@@ -11,22 +11,22 @@ parser.add_argument('-lr_gamma', default=0.7, type=float, help='learning rate')
 parser.add_argument('-node', default=128, type=int, help='node')
 parser.add_argument('-layer', default=2, type=int, help='layer')
 parser.add_argument('-batch', default=200, type=int, help='batch size')
+parser.add_argument('-gpu', default=0, type=int, help='gpu id')
 
 
 pars = parser.parse_args()
 
 
-syntax = f'--num_itr {pars.sn} --lr {pars.lr} --lr_gamma {pars.lr_gamma} --hidden_nodes {pars.node} --blocks {pars.layer} --samp_bs {pars.batch}'
+syntax = f'--num_itr {pars.sn} --lr {pars.lr} --lr_gamma {pars.lr_gamma} --hidden_nodes {pars.node} --blocks {pars.layer} --samp_bs {pars.batch} --gpu {pars.gpu}'
 
 if pars.id == 1:
-    print('python main.py --problem-name Scurve --forward-net toy --backward-net toy  --dir ./ ' + syntax)
     os.system('python main.py --problem-name Scurve --forward-net toy --backward-net toy  --dir ./ ' + syntax)
 elif pars.id == 2:
     os.system('python main.py --problem-name Spiral --forward-net toy --backward-net toy  --dir ./ ' + syntax)
 elif pars.id == 3:
-    os.system('python main.py --problem-name Circle --forward-net toy --backward-net toy  --dir ./ --gpu 1 ' + syntax)
+    os.system('python main.py --problem-name Circle --forward-net toy --backward-net toy  --dir ./ ' + syntax)
 elif pars.id == 4:
-    os.system('python main.py --problem-name Moon --forward-net toy --backward-net toy  --dir ./ --gpu 1 ' + syntax)
+    os.system('python main.py --problem-name Moon --forward-net toy --backward-net toy  --dir ./ ' + syntax)
 
 
 #python main.py --problem-name Spiral --forward-net toy --backward-net toy  --dir ./
