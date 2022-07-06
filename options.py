@@ -14,14 +14,14 @@ def get_default_configs():
     config = ml_collections.ConfigDict()
     # training
     config.training = training = ml_collections.ConfigDict()
-    config.seed = 42
+    config.seed = 999
     config.T = 1.0
     config.interval = 100
     config.train_method = 'joint'
     config.t0 = 0
     #config.problem_name = 'gmm'
-    config.num_itr = 1000
-    config.eval_itr = 1000
+    config.num_itr = 2000
+    config.eval_itr = 500
     config.forward_net = 'toy'
     config.backward_net = 'toy'
 
@@ -35,8 +35,8 @@ def get_default_configs():
     # config.optim = optim = ml_collections.ConfigDict()
     config.weight_decay = 0
     config.optimizer = 'AdamW'
-    config.lr = 2e-3
-    config.lr_gamma = 0.5
+    config.lr = 4e-3
+    config.lr_gamma = 0.8
 
     # network structure
     config.hidden_nodes = 128
