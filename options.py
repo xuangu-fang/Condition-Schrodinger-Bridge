@@ -21,7 +21,7 @@ def get_default_configs():
     config.t0 = 0
     #config.problem_name = 'gmm'
     config.num_itr = 2000
-    config.eval_itr = 500
+    config.eval_itr = 200
     config.forward_net = 'toy'
     config.backward_net = 'toy'
 

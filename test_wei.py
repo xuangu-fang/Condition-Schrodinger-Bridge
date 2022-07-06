@@ -10,7 +10,7 @@ parser.add_argument('-lr', default=4e-3, type=float, help='learning rate')
 parser.add_argument('-lr_gamma', default=0.8, type=float, help='learning rate')
 parser.add_argument('-node', default=128, type=int, help='node')
 parser.add_argument('-layer', default=1, type=int, help='layer')
-parser.add_argument('-batch', default=200, type=int, help='batch size')
+parser.add_argument('-batch', default=500, type=int, help='batch size')
 parser.add_argument('-gpu', default=0, type=int, help='gpu id')
 
 
