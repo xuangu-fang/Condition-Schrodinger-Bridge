@@ -293,7 +293,7 @@ class Runner():
     @torch.no_grad()
     def evaluate(self, opt, stage, n_reused_trajs=0, metrics=None):
         #if util.is_toy_dataset(opt): # yes you are toy
-        SYNTAX = f'{opt.problem_name}_lr_{opt.lr:.1e}_decay_{opt.lr_gamma}_L_{opt.blocks}_B_{opt.samp_bs}'
+        SYNTAX = f'{opt.problem_name}_lr_{opt.lr:.1e}_{opt.lr_gamma}_L_{opt.blocks}_B_{opt.samp_bs}'
         if 1:
             _, snapshot, ckpt = util.evaluate_stage(opt, stage, metrics=None)
             if snapshot:
@@ -301,7 +301,7 @@ class Runner():
                     z = freeze_policy(z)
                     xs, _, _ = self.dyn.sample_traj(self.ts, z, save_traj=True)
 
-                    fn = f"{SYNTAX}_stage{stage}-{z.direction}"
+                    fn = f"{SYNTAX}_s{stage}-{z.direction[0]}"
                     util.save_toy_npy_traj(
                         opt, fn, xs.detach().cpu().numpy(), n_snapshot=15, direction=z.direction
                     )
