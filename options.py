@@ -26,7 +26,8 @@ def get_default_configs():
     config.num_epoch = 1
     config.num_stage = 8
     config.train_bs_x = 1000 # why there is another train_bs_x? figure out why
-    config.sde_type = 'simple'
+    #config.sde_type = 'simple'
+    config.sde_type = 've'
     config.train_bs_t = 100
     config.snapshot_freq = 2
     ''' ==============================================================================
@@ -44,8 +45,8 @@ def get_default_configs():
     # sampling
     #config.samp_bs = 1000 # cantor server doesn't support large batch size
     config.samp_bs = 1000
-    config.sigma_min = 0.1
-    config.sigma_max = 1.0
+    config.sigma_min = 0.01
+    config.sigma_max = 0.3
 
     # optimization
     # config.optim = optim = ml_collections.ConfigDict()
