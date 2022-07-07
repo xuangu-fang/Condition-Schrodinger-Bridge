@@ -24,6 +24,9 @@ def build_boundary_distribution(opt):
     return pdata, prior
 
 def build_prior_sampler(opt, batch_size):
+    if opt.problem_name == 'moon-to-spiral':
+        # uses Scurve as prior distribution to connect two complex distributions
+        return Scurve(batch_size)
     prior = td.MultivariateNormal(torch.zeros(opt.data_dim), torch.eye(opt.data_dim[-1]))
     return PriorSampler(prior, batch_size, opt.device)
 
@@ -34,6 +37,7 @@ def build_data_sampler(opt, batch_size):
             'Moon': Moon,
             'Circle': Circle,
             'Pinwheel': Pinwheel,
+            'Scurve2Spiral': Spiral
         }.get(opt.problem_name)(batch_size)
 
 
@@ -55,15 +59,6 @@ class Scurve:
 
     def sample(self):
         return torch.Tensor(self.samples)
-'''
-
-class Scurve:
-    def __init__(self, batch_size):
-        self.batch_size = batch_size
-
-    def sample(self):
-        return torch.Tensor(normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]]))
-'''     
 
 class Spiral:
     def __init__(self, batch_size):

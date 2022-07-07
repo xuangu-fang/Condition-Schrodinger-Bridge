@@ -27,6 +27,8 @@ elif pars.id == 3:
     os.system('python runner.py --problem-name Circle --forward-net toy --backward-net toy  --dir ./ ' + syntax)
 elif pars.id == 4:
     os.system('python runner.py --problem-name Moon --forward-net toy --backward-net toy  --dir ./ ' + syntax)
+elif pars.id == 5:
+    os.system('python runner.py --problem-name Scurve2Spiral --forward-net toy --backward-net toy  --sde_type ve2 --dir ./ ' + syntax)
 
 
 #python runner.py --problem-name Spiral --forward-net toy --backward-net toy  --dir ./

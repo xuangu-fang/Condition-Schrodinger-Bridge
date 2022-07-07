@@ -304,7 +304,7 @@ class Runner():
 
                     fn = f"{SYNTAX}_s{stage}-{z.direction[0]}"
                     util.save_toy_npy_traj(
-                        opt, fn, xs.detach().cpu().numpy(), n_snapshot=5, direction=z.direction
+                        opt, fn, xs.detach().cpu().numpy(), n_snapshot=10, direction=z.direction
                     )
                     #util.save_toy_npy_traj(opt, fn, xs.detach().cpu().numpy())
 

@@ -89,6 +89,7 @@ def set():
 
     parser.add_argument("--hidden_nodes",   type=int, default=128,        help="hidden nodes")
     parser.add_argument("--blocks",         type=int, default=2,          help="NN layers")
+    parser.add_argument("--sde_type",       type=str, default='ve',       help="diffusion terms")
 
 
     # --------------- SB training & sampling (corrector) ---------------
