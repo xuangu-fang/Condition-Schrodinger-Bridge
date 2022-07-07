@@ -2567,3 +2567,489 @@ generate train data from [[1m[31msampling[0m]!
 [[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3198[0m | time:[1m[32m0:06:45.68[0m
 [[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3263[0m | time:[1m[32m0:06:46.01[0m
 [1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  16%|█▌        | 16/100 [00:00<00:00, 133.04it/s][1m[33mPropagating Dynamics...[0m:  39%|███▉      | 39/100 [00:00<00:00, 184.11it/s][1m[33mPropagating Dynamics...[0m:  60%|██████    | 60/100 [00:00<00:00, 194.86it/s][1m[33mPropagating Dynamics...[0m:  85%|████████▌ | 85/100 [00:00<00:00, 215.36it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 193.81it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6240[0m | time:[1m[32m0:06:24.64[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5874[0m | time:[1m[32m0:06:24.99[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6448[0m | time:[1m[32m0:06:25.33[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6753[0m | time:[1m[32m0:06:25.67[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6328[0m | time:[1m[32m0:06:26.01[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5751[0m | time:[1m[32m0:06:26.32[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6805[0m | time:[1m[32m0:06:26.60[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6630[0m | time:[1m[32m0:06:26.83[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5854[0m | time:[1m[32m0:06:27.06[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6240[0m | time:[1m[32m0:06:27.29[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6381[0m | time:[1m[32m0:06:27.58[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6476[0m | time:[1m[32m0:06:27.88[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6102[0m | time:[1m[32m0:06:28.21[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7020[0m | time:[1m[32m0:06:28.52[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6603[0m | time:[1m[32m0:06:28.83[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6146[0m | time:[1m[32m0:06:29.16[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6642[0m | time:[1m[32m0:06:29.48[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6259[0m | time:[1m[32m0:06:29.81[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6650[0m | time:[1m[32m0:06:30.12[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6365[0m | time:[1m[32m0:06:30.45[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6819[0m | time:[1m[32m0:06:30.78[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6525[0m | time:[1m[32m0:06:31.08[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6615[0m | time:[1m[32m0:06:31.42[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6509[0m | time:[1m[32m0:06:31.75[0m
+[[1m[35mSB backward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6534[0m | time:[1m[32m0:06:32.06[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  47%|████▋     | 47/100 [00:00<00:00, 464.18it/s][1m[33mPropagating Dynamics...[0m:  94%|█████████▍| 94/100 [00:00<00:00, 430.37it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 432.29it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2396[0m | time:[1m[32m0:06:47.21[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2252[0m | time:[1m[32m0:06:47.51[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2522[0m | time:[1m[32m0:06:47.83[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2362[0m | time:[1m[32m0:06:48.17[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2290[0m | time:[1m[32m0:06:48.46[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2209[0m | time:[1m[32m0:06:48.77[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2334[0m | time:[1m[32m0:06:49.11[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2208[0m | time:[1m[32m0:06:49.46[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2361[0m | time:[1m[32m0:06:49.81[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2435[0m | time:[1m[32m0:06:50.16[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2243[0m | time:[1m[32m0:06:50.53[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2342[0m | time:[1m[32m0:06:50.84[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2298[0m | time:[1m[32m0:06:51.13[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2268[0m | time:[1m[32m0:06:51.43[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2478[0m | time:[1m[32m0:06:51.73[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2475[0m | time:[1m[32m0:06:51.97[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2338[0m | time:[1m[32m0:06:52.22[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2418[0m | time:[1m[32m0:06:52.54[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2588[0m | time:[1m[32m0:06:52.88[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2273[0m | time:[1m[32m0:06:53.20[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2407[0m | time:[1m[32m0:06:53.52[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2061[0m | time:[1m[32m0:06:53.85[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2349[0m | time:[1m[32m0:06:54.18[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2439[0m | time:[1m[32m0:06:54.52[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2415[0m | time:[1m[32m0:06:54.88[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  89%|████████▉ | 89/100 [00:00<00:00, 810.57it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 771.23it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0826[0m | time:[1m[32m0:06:32.80[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0642[0m | time:[1m[32m0:06:33.16[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0710[0m | time:[1m[32m0:06:33.52[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1450[0m | time:[1m[32m0:06:33.87[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0842[0m | time:[1m[32m0:06:34.22[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1207[0m | time:[1m[32m0:06:34.58[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0826[0m | time:[1m[32m0:06:34.96[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0276[0m | time:[1m[32m0:06:35.32[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1591[0m | time:[1m[32m0:06:35.59[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0937[0m | time:[1m[32m0:06:35.90[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1187[0m | time:[1m[32m0:06:36.26[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0800[0m | time:[1m[32m0:06:36.61[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1237[0m | time:[1m[32m0:06:36.96[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1420[0m | time:[1m[32m0:06:37.31[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1637[0m | time:[1m[32m0:06:37.81[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0624[0m | time:[1m[32m0:06:38.21[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1266[0m | time:[1m[32m0:06:38.60[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1010[0m | time:[1m[32m0:06:38.98[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1138[0m | time:[1m[32m0:06:39.29[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0393[0m | time:[1m[32m0:06:39.81[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0423[0m | time:[1m[32m0:06:40.23[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0823[0m | time:[1m[32m0:06:40.66[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1254[0m | time:[1m[32m0:06:41.02[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0739[0m | time:[1m[32m0:06:41.33[0m
+[[1m[35mSB forward[0m] stage [1m[36m22[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1486[0m | time:[1m[32m0:06:41.71[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  39%|███▉      | 39/100 [00:00<00:00, 363.89it/s][1m[33mPropagating Dynamics...[0m:  76%|███████▌  | 76/100 [00:00<00:00, 318.30it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 302.70it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3032[0m | time:[1m[32m0:06:55.48[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3055[0m | time:[1m[32m0:06:55.84[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3083[0m | time:[1m[32m0:06:56.17[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3293[0m | time:[1m[32m0:06:56.54[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3081[0m | time:[1m[32m0:06:56.85[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2980[0m | time:[1m[32m0:06:57.15[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2932[0m | time:[1m[32m0:06:57.41[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2742[0m | time:[1m[32m0:06:57.67[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3373[0m | time:[1m[32m0:06:57.95[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3112[0m | time:[1m[32m0:06:58.26[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2949[0m | time:[1m[32m0:06:58.57[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3031[0m | time:[1m[32m0:06:58.84[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3103[0m | time:[1m[32m0:06:59.15[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3048[0m | time:[1m[32m0:06:59.43[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3386[0m | time:[1m[32m0:06:59.73[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2997[0m | time:[1m[32m0:07:00.03[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3192[0m | time:[1m[32m0:07:00.33[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3103[0m | time:[1m[32m0:07:00.67[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3084[0m | time:[1m[32m0:07:01.06[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3013[0m | time:[1m[32m0:07:01.35[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3226[0m | time:[1m[32m0:07:01.59[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2760[0m | time:[1m[32m0:07:01.82[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3214[0m | time:[1m[32m0:07:02.10[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3135[0m | time:[1m[32m0:07:02.38[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3119[0m | time:[1m[32m0:07:02.66[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  73%|███████▎  | 73/100 [00:00<00:00, 724.69it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 634.12it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6365[0m | time:[1m[32m0:06:42.66[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6339[0m | time:[1m[32m0:06:42.99[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7038[0m | time:[1m[32m0:06:43.26[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5861[0m | time:[1m[32m0:06:43.43[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6696[0m | time:[1m[32m0:06:43.71[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6112[0m | time:[1m[32m0:06:44.03[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6781[0m | time:[1m[32m0:06:44.38[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5855[0m | time:[1m[32m0:06:44.75[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6034[0m | time:[1m[32m0:06:45.04[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6739[0m | time:[1m[32m0:06:45.36[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6467[0m | time:[1m[32m0:06:45.66[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6212[0m | time:[1m[32m0:06:46.02[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6271[0m | time:[1m[32m0:06:46.37[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6392[0m | time:[1m[32m0:06:46.72[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6811[0m | time:[1m[32m0:06:47.02[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7234[0m | time:[1m[32m0:06:47.32[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6431[0m | time:[1m[32m0:06:47.61[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6030[0m | time:[1m[32m0:06:47.89[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6637[0m | time:[1m[32m0:06:48.17[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6244[0m | time:[1m[32m0:06:48.48[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5701[0m | time:[1m[32m0:06:48.78[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6934[0m | time:[1m[32m0:06:49.03[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6238[0m | time:[1m[32m0:06:49.28[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6413[0m | time:[1m[32m0:06:49.55[0m
+[[1m[35mSB backward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5869[0m | time:[1m[32m0:06:49.82[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  63%|██████▎   | 63/100 [00:00<00:00, 615.23it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 626.14it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2445[0m | time:[1m[32m0:07:03.49[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2379[0m | time:[1m[32m0:07:03.79[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2322[0m | time:[1m[32m0:07:04.06[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2309[0m | time:[1m[32m0:07:04.33[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2277[0m | time:[1m[32m0:07:04.61[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2110[0m | time:[1m[32m0:07:04.87[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2469[0m | time:[1m[32m0:07:05.24[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2313[0m | time:[1m[32m0:07:05.58[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2119[0m | time:[1m[32m0:07:05.93[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2375[0m | time:[1m[32m0:07:06.28[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2358[0m | time:[1m[32m0:07:06.62[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2436[0m | time:[1m[32m0:07:06.98[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2204[0m | time:[1m[32m0:07:07.36[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2325[0m | time:[1m[32m0:07:07.74[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2196[0m | time:[1m[32m0:07:08.07[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2333[0m | time:[1m[32m0:07:08.44[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2146[0m | time:[1m[32m0:07:08.85[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2323[0m | time:[1m[32m0:07:09.21[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2419[0m | time:[1m[32m0:07:09.56[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2253[0m | time:[1m[32m0:07:09.81[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2197[0m | time:[1m[32m0:07:10.17[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2244[0m | time:[1m[32m0:07:10.54[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2429[0m | time:[1m[32m0:07:10.85[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2340[0m | time:[1m[32m0:07:11.22[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2232[0m | time:[1m[32m0:07:11.61[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  40%|████      | 40/100 [00:00<00:00, 396.47it/s][1m[33mPropagating Dynamics...[0m:  80%|████████  | 80/100 [00:00<00:00, 358.52it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 348.60it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1470[0m | time:[1m[32m0:06:50.37[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1722[0m | time:[1m[32m0:06:50.63[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1032[0m | time:[1m[32m0:06:50.92[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0904[0m | time:[1m[32m0:06:51.28[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0511[0m | time:[1m[32m0:06:51.66[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0841[0m | time:[1m[32m0:06:51.96[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1581[0m | time:[1m[32m0:06:52.23[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0838[0m | time:[1m[32m0:06:52.44[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0216[0m | time:[1m[32m0:06:52.70[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0556[0m | time:[1m[32m0:06:53.04[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1129[0m | time:[1m[32m0:06:53.35[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0842[0m | time:[1m[32m0:06:53.70[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1208[0m | time:[1m[32m0:06:54.04[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1445[0m | time:[1m[32m0:06:54.39[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0810[0m | time:[1m[32m0:06:54.73[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1421[0m | time:[1m[32m0:06:55.05[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0863[0m | time:[1m[32m0:06:55.37[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1121[0m | time:[1m[32m0:06:55.70[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1130[0m | time:[1m[32m0:06:56.03[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1397[0m | time:[1m[32m0:06:56.34[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1009[0m | time:[1m[32m0:06:56.64[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1081[0m | time:[1m[32m0:06:56.97[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0539[0m | time:[1m[32m0:06:57.31[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0958[0m | time:[1m[32m0:06:57.66[0m
+[[1m[35mSB forward[0m] stage [1m[36m23[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0712[0m | time:[1m[32m0:06:57.96[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  65%|██████▌   | 65/100 [00:00<00:00, 626.94it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 472.74it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3172[0m | time:[1m[32m0:07:12.51[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3075[0m | time:[1m[32m0:07:12.90[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2967[0m | time:[1m[32m0:07:13.25[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3192[0m | time:[1m[32m0:07:13.61[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3225[0m | time:[1m[32m0:07:13.98[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3200[0m | time:[1m[32m0:07:14.37[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2999[0m | time:[1m[32m0:07:14.75[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3286[0m | time:[1m[32m0:07:15.13[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3071[0m | time:[1m[32m0:07:15.51[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3302[0m | time:[1m[32m0:07:15.91[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3068[0m | time:[1m[32m0:07:16.32[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2962[0m | time:[1m[32m0:07:16.72[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3250[0m | time:[1m[32m0:07:17.11[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2986[0m | time:[1m[32m0:07:17.53[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2961[0m | time:[1m[32m0:07:17.79[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2906[0m | time:[1m[32m0:07:17.98[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3171[0m | time:[1m[32m0:07:18.37[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3123[0m | time:[1m[32m0:07:18.76[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3055[0m | time:[1m[32m0:07:19.11[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3307[0m | time:[1m[32m0:07:19.49[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2873[0m | time:[1m[32m0:07:19.93[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3038[0m | time:[1m[32m0:07:20.34[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2951[0m | time:[1m[32m0:07:20.74[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2929[0m | time:[1m[32m0:07:21.15[0m
+[[1m[35mSB forward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3144[0m | time:[1m[32m0:07:21.56[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  46%|████▌     | 46/100 [00:00<00:00, 454.07it/s][1m[33mPropagating Dynamics...[0m:  92%|█████████▏| 92/100 [00:00<00:00, 339.32it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 353.67it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6223[0m | time:[1m[32m0:06:58.73[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5586[0m | time:[1m[32m0:06:59.06[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7276[0m | time:[1m[32m0:06:59.37[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6399[0m | time:[1m[32m0:06:59.66[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7054[0m | time:[1m[32m0:06:59.97[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6830[0m | time:[1m[32m0:07:00.26[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5779[0m | time:[1m[32m0:07:00.53[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6360[0m | time:[1m[32m0:07:00.81[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6331[0m | time:[1m[32m0:07:01.11[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7181[0m | time:[1m[32m0:07:01.39[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6536[0m | time:[1m[32m0:07:01.68[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6307[0m | time:[1m[32m0:07:01.97[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6683[0m | time:[1m[32m0:07:02.24[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6709[0m | time:[1m[32m0:07:02.49[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6723[0m | time:[1m[32m0:07:02.74[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7254[0m | time:[1m[32m0:07:03.01[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7308[0m | time:[1m[32m0:07:03.30[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7252[0m | time:[1m[32m0:07:03.59[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7100[0m | time:[1m[32m0:07:03.88[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7004[0m | time:[1m[32m0:07:04.16[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6838[0m | time:[1m[32m0:07:04.46[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6546[0m | time:[1m[32m0:07:04.77[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6785[0m | time:[1m[32m0:07:05.10[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5835[0m | time:[1m[32m0:07:05.42[0m
+[[1m[35mSB backward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6796[0m | time:[1m[32m0:07:05.75[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  47%|████▋     | 47/100 [00:00<00:00, 465.24it/s][1m[33mPropagating Dynamics...[0m:  94%|█████████▍| 94/100 [00:00<00:00, 444.58it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 446.53it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2382[0m | time:[1m[32m0:07:22.45[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2513[0m | time:[1m[32m0:07:22.84[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2553[0m | time:[1m[32m0:07:23.23[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2404[0m | time:[1m[32m0:07:23.60[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2602[0m | time:[1m[32m0:07:23.96[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2365[0m | time:[1m[32m0:07:24.30[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2418[0m | time:[1m[32m0:07:24.66[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2406[0m | time:[1m[32m0:07:25.03[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2558[0m | time:[1m[32m0:07:25.38[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2522[0m | time:[1m[32m0:07:25.67[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2618[0m | time:[1m[32m0:07:25.86[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2550[0m | time:[1m[32m0:07:26.25[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2468[0m | time:[1m[32m0:07:26.62[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2387[0m | time:[1m[32m0:07:26.98[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2766[0m | time:[1m[32m0:07:27.34[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2367[0m | time:[1m[32m0:07:27.69[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2186[0m | time:[1m[32m0:07:28.06[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2479[0m | time:[1m[32m0:07:28.42[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2451[0m | time:[1m[32m0:07:28.77[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2340[0m | time:[1m[32m0:07:29.09[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2463[0m | time:[1m[32m0:07:29.41[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2485[0m | time:[1m[32m0:07:29.74[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2391[0m | time:[1m[32m0:07:30.07[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2598[0m | time:[1m[32m0:07:30.41[0m
+[[1m[35mSB backward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2301[0m | time:[1m[32m0:07:30.75[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  53%|█████▎    | 53/100 [00:00<00:00, 518.46it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 509.87it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1656[0m | time:[1m[32m0:07:06.56[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0721[0m | time:[1m[32m0:07:06.87[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1219[0m | time:[1m[32m0:07:07.16[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1050[0m | time:[1m[32m0:07:07.45[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1586[0m | time:[1m[32m0:07:07.75[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1060[0m | time:[1m[32m0:07:08.04[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0492[0m | time:[1m[32m0:07:08.34[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1424[0m | time:[1m[32m0:07:08.64[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1822[0m | time:[1m[32m0:07:08.95[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1543[0m | time:[1m[32m0:07:09.26[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1373[0m | time:[1m[32m0:07:09.61[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1017[0m | time:[1m[32m0:07:09.95[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1630[0m | time:[1m[32m0:07:10.29[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0670[0m | time:[1m[32m0:07:10.62[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1057[0m | time:[1m[32m0:07:10.96[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.2015[0m | time:[1m[32m0:07:11.29[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0497[0m | time:[1m[32m0:07:11.56[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1516[0m | time:[1m[32m0:07:11.89[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1733[0m | time:[1m[32m0:07:12.22[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0770[0m | time:[1m[32m0:07:12.58[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0726[0m | time:[1m[32m0:07:12.94[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1064[0m | time:[1m[32m0:07:13.29[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1471[0m | time:[1m[32m0:07:13.63[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.2069[0m | time:[1m[32m0:07:13.98[0m
+[[1m[35mSB forward[0m] stage [1m[36m24[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1338[0m | time:[1m[32m0:07:14.32[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  52%|█████▏    | 52/100 [00:00<00:00, 502.93it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 372.45it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3073[0m | time:[1m[32m0:07:31.48[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2757[0m | time:[1m[32m0:07:31.81[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3026[0m | time:[1m[32m0:07:32.12[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3195[0m | time:[1m[32m0:07:32.44[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3131[0m | time:[1m[32m0:07:32.75[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2779[0m | time:[1m[32m0:07:33.05[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3049[0m | time:[1m[32m0:07:33.35[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2977[0m | time:[1m[32m0:07:33.67[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3198[0m | time:[1m[32m0:07:33.98[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3135[0m | time:[1m[32m0:07:34.19[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3110[0m | time:[1m[32m0:07:34.40[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3124[0m | time:[1m[32m0:07:34.80[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3158[0m | time:[1m[32m0:07:35.15[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3176[0m | time:[1m[32m0:07:35.48[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3096[0m | time:[1m[32m0:07:35.80[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3030[0m | time:[1m[32m0:07:36.11[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3114[0m | time:[1m[32m0:07:36.45[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3137[0m | time:[1m[32m0:07:36.81[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2806[0m | time:[1m[32m0:07:37.13[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3210[0m | time:[1m[32m0:07:37.48[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3073[0m | time:[1m[32m0:07:37.79[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3094[0m | time:[1m[32m0:07:38.10[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3043[0m | time:[1m[32m0:07:38.45[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3236[0m | time:[1m[32m0:07:38.76[0m
+[[1m[35mSB forward[0m] stage [1m[36m27[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2890[0m | time:[1m[32m0:07:39.09[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  57%|█████▋    | 57/100 [00:00<00:00, 569.10it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 510.15it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6876[0m | time:[1m[32m0:07:15.21[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6301[0m | time:[1m[32m0:07:15.57[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7336[0m | time:[1m[32m0:07:15.98[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6698[0m | time:[1m[32m0:07:16.39[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6415[0m | time:[1m[32m0:07:16.79[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5987[0m | time:[1m[32m0:07:17.15[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6218[0m | time:[1m[32m0:07:17.51[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6258[0m | time:[1m[32m0:07:17.91[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6667[0m | time:[1m[32m0:07:18.30[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6749[0m | time:[1m[32m0:07:18.70[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6082[0m | time:[1m[32m0:07:19.08[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6943[0m | time:[1m[32m0:07:19.51[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6412[0m | time:[1m[32m0:07:19.83[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6312[0m | time:[1m[32m0:07:20.15[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7237[0m | time:[1m[32m0:07:20.48[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6822[0m | time:[1m[32m0:07:20.80[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6651[0m | time:[1m[32m0:07:21.09[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6714[0m | time:[1m[32m0:07:21.41[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.7227[0m | time:[1m[32m0:07:21.76[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6555[0m | time:[1m[32m0:07:22.08[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6784[0m | time:[1m[32m0:07:22.39[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5813[0m | time:[1m[32m0:07:22.70[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6421[0m | time:[1m[32m0:07:23.01[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6847[0m | time:[1m[32m0:07:23.33[0m
+[[1m[35mSB backward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6850[0m | time:[1m[32m0:07:23.66[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  68%|██████▊   | 68/100 [00:00<00:00, 658.37it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 615.86it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2277[0m | time:[1m[32m0:07:39.81[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2420[0m | time:[1m[32m0:07:40.19[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2269[0m | time:[1m[32m0:07:40.57[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2374[0m | time:[1m[32m0:07:40.93[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2200[0m | time:[1m[32m0:07:41.31[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2415[0m | time:[1m[32m0:07:41.66[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2313[0m | time:[1m[32m0:07:42.04[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2421[0m | time:[1m[32m0:07:42.40[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2570[0m | time:[1m[32m0:07:42.77[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2299[0m | time:[1m[32m0:07:43.11[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2359[0m | time:[1m[32m0:07:43.43[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2504[0m | time:[1m[32m0:07:43.74[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2314[0m | time:[1m[32m0:07:44.09[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2371[0m | time:[1m[32m0:07:44.44[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2405[0m | time:[1m[32m0:07:44.82[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2566[0m | time:[1m[32m0:07:45.17[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2274[0m | time:[1m[32m0:07:45.53[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2364[0m | time:[1m[32m0:07:45.90[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2440[0m | time:[1m[32m0:07:46.28[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2590[0m | time:[1m[32m0:07:46.65[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2315[0m | time:[1m[32m0:07:47.02[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2456[0m | time:[1m[32m0:07:47.39[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2395[0m | time:[1m[32m0:07:47.75[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2326[0m | time:[1m[32m0:07:48.10[0m
+[[1m[35mSB backward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2375[0m | time:[1m[32m0:07:48.45[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  42%|████▏     | 42/100 [00:00<00:00, 400.13it/s][1m[33mPropagating Dynamics...[0m:  83%|████████▎ | 83/100 [00:00<00:00, 402.05it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 398.85it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1573[0m | time:[1m[32m0:07:24.33[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1453[0m | time:[1m[32m0:07:24.66[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1840[0m | time:[1m[32m0:07:24.99[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.2013[0m | time:[1m[32m0:07:25.31[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1059[0m | time:[1m[32m0:07:25.64[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1197[0m | time:[1m[32m0:07:25.99[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1122[0m | time:[1m[32m0:07:26.35[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0869[0m | time:[1m[32m0:07:26.69[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.2670[0m | time:[1m[32m0:07:27.02[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1401[0m | time:[1m[32m0:07:27.37[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0864[0m | time:[1m[32m0:07:27.71[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1093[0m | time:[1m[32m0:07:28.05[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1389[0m | time:[1m[32m0:07:28.43[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1372[0m | time:[1m[32m0:07:28.78[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1944[0m | time:[1m[32m0:07:29.08[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1265[0m | time:[1m[32m0:07:29.35[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1933[0m | time:[1m[32m0:07:29.67[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1530[0m | time:[1m[32m0:07:30.03[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1585[0m | time:[1m[32m0:07:30.36[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0722[0m | time:[1m[32m0:07:30.71[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1787[0m | time:[1m[32m0:07:31.07[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.0140[0m | time:[1m[32m0:07:31.42[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1656[0m | time:[1m[32m0:07:31.77[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1443[0m | time:[1m[32m0:07:32.17[0m
+[[1m[35mSB forward[0m] stage [1m[36m25[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-1.1473[0m | time:[1m[32m0:07:32.53[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  77%|███████▋  | 77/100 [00:00<00:00, 735.55it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 683.57it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2707[0m | time:[1m[32m0:07:49.25[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2970[0m | time:[1m[32m0:07:49.62[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2769[0m | time:[1m[32m0:07:49.97[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3011[0m | time:[1m[32m0:07:50.33[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2917[0m | time:[1m[32m0:07:50.70[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2919[0m | time:[1m[32m0:07:51.06[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2940[0m | time:[1m[32m0:07:51.43[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3006[0m | time:[1m[32m0:07:51.80[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3043[0m | time:[1m[32m0:07:52.17[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2712[0m | time:[1m[32m0:07:52.41[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2695[0m | time:[1m[32m0:07:52.73[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3089[0m | time:[1m[32m0:07:53.07[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3057[0m | time:[1m[32m0:07:53.42[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2893[0m | time:[1m[32m0:07:53.74[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2849[0m | time:[1m[32m0:07:54.08[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2868[0m | time:[1m[32m0:07:54.42[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2884[0m | time:[1m[32m0:07:54.79[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2750[0m | time:[1m[32m0:07:55.19[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3235[0m | time:[1m[32m0:07:55.57[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3057[0m | time:[1m[32m0:07:55.87[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3106[0m | time:[1m[32m0:07:56.22[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.3127[0m | time:[1m[32m0:07:56.56[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2996[0m | time:[1m[32m0:07:56.95[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2867[0m | time:[1m[32m0:07:57.32[0m
+[[1m[35mSB forward[0m] stage [1m[36m28[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2948[0m | time:[1m[32m0:07:57.68[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  43%|████▎     | 43/100 [00:00<00:00, 409.13it/s][1m[33mPropagating Dynamics...[0m:  84%|████████▍ | 84/100 [00:00<00:00, 351.35it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 362.50it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6881[0m | time:[1m[32m0:07:33.22[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6565[0m | time:[1m[32m0:07:33.57[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6313[0m | time:[1m[32m0:07:33.95[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6310[0m | time:[1m[32m0:07:34.31[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6140[0m | time:[1m[32m0:07:34.66[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5885[0m | time:[1m[32m0:07:35.03[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6862[0m | time:[1m[32m0:07:35.36[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6440[0m | time:[1m[32m0:07:35.75[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5989[0m | time:[1m[32m0:07:36.13[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6694[0m | time:[1m[32m0:07:36.48[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6694[0m | time:[1m[32m0:07:36.85[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6907[0m | time:[1m[32m0:07:37.24[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6289[0m | time:[1m[32m0:07:37.62[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6304[0m | time:[1m[32m0:07:37.98[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6036[0m | time:[1m[32m0:07:38.31[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6881[0m | time:[1m[32m0:07:38.58[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6132[0m | time:[1m[32m0:07:38.88[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6439[0m | time:[1m[32m0:07:39.24[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6835[0m | time:[1m[32m0:07:39.60[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6100[0m | time:[1m[32m0:07:39.96[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.5916[0m | time:[1m[32m0:07:40.31[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6383[0m | time:[1m[32m0:07:40.64[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6423[0m | time:[1m[32m0:07:40.98[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6642[0m | time:[1m[32m0:07:41.32[0m
+[[1m[35mSB backward[0m] stage [1m[36m26[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.6529[0m | time:[1m[32m0:07:41.62[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  77%|███████▋  | 77/100 [00:00<00:00, 754.45it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 660.62it/s]
+generate train data from [[1m[31msampling[0m]!
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m1[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2089[0m | time:[1m[32m0:07:58.57[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m2[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2569[0m | time:[1m[32m0:07:58.94[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m3[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2391[0m | time:[1m[32m0:07:59.30[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m4[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2466[0m | time:[1m[32m0:07:59.65[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m5[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2345[0m | time:[1m[32m0:08:00.00[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m6[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2403[0m | time:[1m[32m0:08:00.37[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m7[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2340[0m | time:[1m[32m0:08:00.75[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m8[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2202[0m | time:[1m[32m0:08:01.11[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m9[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2604[0m | time:[1m[32m0:08:01.45[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m10[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2442[0m | time:[1m[32m0:08:01.80[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m11[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2402[0m | time:[1m[32m0:08:02.14[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m12[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2278[0m | time:[1m[32m0:08:02.45[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m13[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2210[0m | time:[1m[32m0:08:02.81[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m14[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2554[0m | time:[1m[32m0:08:03.19[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m15[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2303[0m | time:[1m[32m0:08:03.55[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m16[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2471[0m | time:[1m[32m0:08:03.94[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m17[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2356[0m | time:[1m[32m0:08:04.29[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m18[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2413[0m | time:[1m[32m0:08:04.65[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m19[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2511[0m | time:[1m[32m0:08:04.97[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m20[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2246[0m | time:[1m[32m0:08:05.33[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m21[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2331[0m | time:[1m[32m0:08:05.67[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m22[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2389[0m | time:[1m[32m0:08:05.99[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m23[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2288[0m | time:[1m[32m0:08:06.35[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m24[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2455[0m | time:[1m[32m0:08:06.74[0m
+[[1m[35mSB backward[0m] stage [1m[36m29[0m/80 | ep [1m[36m1[0m/1 | train_it [1m[36m25[0m/25 | lr:[1m[33m3.20e-03[0m | loss:[1m[31m-0.2199[0m | time:[1m[32m0:08:07.14[0m
+[1m[33mPropagating Dynamics...[0m:   0%|          | 0/100 [00:00<?, ?it/s][1m[33mPropagating Dynamics...[0m:  35%|███▌      | 35/100 [00:00<00:00, 348.92it/s][1m[33mPropagating Dynamics...[0m:  70%|███████   | 70/100 [00:00<00:00, 263.56it/s][1m[33mPropagating Dynamics...[0m: 100%|██████████| 100/100 [00:00<00:00, 306.26it/s]
