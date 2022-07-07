@@ -24,7 +24,7 @@ def get_default_configs():
     config.train_method = 'alternate'
     config.use_arange_t = True
     config.num_epoch = 1
-    config.num_stage = 10
+    config.num_stage = 8
     config.train_bs_x = 1000 # why there is another train_bs_x? figure out why
     config.sde_type = 'simple'
     config.train_bs_t = 100
@@ -36,16 +36,16 @@ def get_default_configs():
     config.t0 = 0
     #config.problem_name = 'gmm'
     #config.num_itr = 2000 # joint
-    config.num_itr = 100
-    config.eval_itr = 100
+    config.num_itr = 250
+    config.eval_itr = 250
     config.forward_net = 'toy'
     config.backward_net = 'toy'
 
     # sampling
     #config.samp_bs = 1000 # cantor server doesn't support large batch size
     config.samp_bs = 1000
-    config.sigma_min = 0.01
-    config.sigma_max = 0.3
+    config.sigma_min = 0.1
+    config.sigma_max = 1.0
 
     # optimization
     # config.optim = optim = ml_collections.ConfigDict()
@@ -101,7 +101,7 @@ def set():
     parser.add_argument("--lr-f",           type=float, default=None,     help="learning rate for forward network")
     parser.add_argument("--lr-b",           type=float, default=None,     help="learning rate for backward network")
     parser.add_argument("--lr_gamma",       type=float, default=1.0,      help="learning rate decay ratio")
-    parser.add_argument("--lr_step",        type=int,   default=500,     help="learning rate decay step size")
+    parser.add_argument("--lr_step",        type=int,   default=1000,     help="learning rate decay step size")
     parser.add_argument("--l2-norm",        type=float, default=0.0,      help="weight decay rate")
     parser.add_argument("--optimizer",      type=str,   default='AdamW',  help="optmizer")
     parser.add_argument("--grad-clip",      type=float, default=None,     help="clip the gradient")
