@@ -46,6 +46,8 @@ def normalize_both(xs):
     return xs 
 
 """ motivated by GP-Sinkhorn's code """
+# fixed seed
+'''
 class Scurve:
     def __init__(self, batch_size):
         self.batch_size = batch_size
@@ -53,6 +55,14 @@ class Scurve:
 
     def sample(self):
         return torch.Tensor(self.samples)
+'''
+
+class Scurve:
+    def __init__(self, batch_size):
+        self.batch_size = batch_size
+
+    def sample(self):
+        return torch.Tensor(normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]]))
       
 
 class Spiral:
