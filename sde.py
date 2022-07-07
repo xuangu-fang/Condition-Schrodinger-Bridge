@@ -15,6 +15,7 @@ def build(opt, p, q):
 
     return {
         've': VESDE,
+        've2': VESDE2, 
         'simple': SimpleSDE,
     }.get(opt.sde_type)(opt, p, q)
 
@@ -104,14 +105,27 @@ class SimpleSDE(BaseSDE):
 class VESDE(BaseSDE):
     def __init__(self, opt, p, q):
         super(VESDE,self).__init__(opt, p, q)
-        self.s_min=opt.sigma_min
-        self.s_max=opt.sigma_max
+        self.s_min = opt.sigma_min
+        self.s_max = opt.sigma_max
 
     def _f(self, x, t):
         return torch.zeros_like(x)
 
     def _g(self, t):
-        return compute_ve_diffusion(t, self.s_min, self.s_max)
+        return compute_sigmas(t, s_min, s_max) * compute_ve_g_scale(s_min, s_max)
+
+""" Wei is playing with interpolation of two complex distributions """
+class VESDE2(BaseSDE):
+    def __init__(self, opt, p, q):
+        super(VESDE,self).__init__(opt, p, q)
+        self.s_min = opt.sigma_min
+        self.s_max = opt.sigma_max
+
+    def _f(self, x, t):
+        return torch.zeros_like(x)
+
+    def _g(self, t):
+        return compute_sigmas_two_ways(t, s_min, s_max) * compute_ve_g_scale(s_min, s_max)
 
 ####################################################
 ##  Implementation of SDE analytic kernel         ##
@@ -125,5 +139,6 @@ def compute_sigmas(t, s_min, s_max):
 def compute_ve_g_scale(s_min, s_max):
     return np.sqrt(2*np.log(s_max/s_min))
 
-def compute_ve_diffusion(t, s_min, s_max):
-    return compute_sigmas(t, s_min, s_max) * compute_ve_g_scale(s_min, s_max)
+""" Wei's update on interpolation of two complex distributions """
+def compute_sigmas_two_ways(t, s_min, s_max):
+    return s_min * (s_max/s_min)**(1 - 2 * np.abs(t-0.5))

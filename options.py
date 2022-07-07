@@ -29,7 +29,7 @@ def get_default_configs():
     #config.sde_type = 'simple'
     config.sde_type = 've'
     config.train_bs_t = 100
-    config.snapshot_freq = 20
+    config.snapshot_freq = 10
     ''' ==============================================================================
         ================   Ending module of alternative trainig loss =================
         ============================================================================== '''
@@ -102,7 +102,7 @@ def set():
     parser.add_argument("--lr-f",           type=float, default=None,     help="learning rate for forward network")
     parser.add_argument("--lr-b",           type=float, default=None,     help="learning rate for backward network")
     parser.add_argument("--lr_gamma",       type=float, default=1.0,      help="learning rate decay ratio")
-    parser.add_argument("--lr_step",        type=int,   default=1000,     help="learning rate decay step size")
+    parser.add_argument("--lr_step",        type=int,   default=500,     help="learning rate decay step size")
     parser.add_argument("--l2-norm",        type=float, default=0.0,      help="weight decay rate")
     parser.add_argument("--optimizer",      type=str,   default='AdamW',  help="optmizer")
     parser.add_argument("--grad-clip",      type=float, default=None,     help="clip the gradient")
