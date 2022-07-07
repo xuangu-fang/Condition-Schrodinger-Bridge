@@ -196,25 +196,6 @@ class Runner():
 
         return train_xs, train_zs, train_ts
 
-    def sb_alternate_train_stage(self, opt, stage, epoch, direction, reused_sampler=None):
-        policy_opt, policy_impt = {
-            'forward':  [self.z_f, self.z_b], # train forwad,   sample from backward
-            'backward': [self.z_b, self.z_f], # train backward, sample from forward
-        }.get(direction)
-
-        for ep in range(epoch):
-            # prepare training data
-            train_xs, train_zs, train_ts = self.sample_train_data(
-                opt, policy_opt, policy_impt, reused_sampler
-            )
-
-            # train one epoch
-            policy_impt = freeze_policy(policy_impt)
-            policy_opt = activate_policy(policy_opt)
-            self.sb_alternate_train_ep(
-                opt, ep, stage, direction, train_xs, train_zs, train_ts, policy_opt, epoch
-            )
-
     def sb_alternate_train_ep(
         self, opt, ep, stage, direction, train_xs, train_zs, train_ts, policy, num_epoch
     ):
@@ -234,6 +215,7 @@ class Runner():
             # -------- build sample --------
             ts = train_ts[samp_t_idx].detach()
             xs = train_xs[samp_x_idx][:, samp_t_idx, ...].to(opt.device)
+
             zs_impt = train_zs[samp_x_idx][:, samp_t_idx, ...].to(opt.device)
 
             optimizer.zero_grad()
@@ -267,6 +249,25 @@ class Runner():
             zs_impt = zs_impt.reshape(zs.shape)
             self.log_sb_alternate_train(
                 opt, it, ep, stage, loss, zs, zs_impt, optimizer, direction, num_epoch
+            )
+
+    def sb_alternate_train_stage(self, opt, stage, epoch, direction, reused_sampler=None):
+        policy_opt, policy_impt = {
+            'forward':  [self.z_f, self.z_b], # train forwad,   sample from backward
+            'backward': [self.z_b, self.z_f], # train backward, sample from forward
+        }.get(direction)
+
+        for ep in range(epoch):
+            # prepare training data
+            train_xs, train_zs, train_ts = self.sample_train_data(
+                opt, policy_opt, policy_impt, reused_sampler
+            )
+
+            # train one epoch
+            policy_impt = freeze_policy(policy_impt)
+            policy_opt = activate_policy(policy_opt)
+            self.sb_alternate_train_ep(
+                opt, ep, stage, direction, train_xs, train_zs, train_ts, policy_opt, epoch
             )
 
     def sb_alternate_train(self, opt):
