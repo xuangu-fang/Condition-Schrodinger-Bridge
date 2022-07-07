@@ -293,7 +293,7 @@ class Runner():
     @torch.no_grad()
     def evaluate(self, opt, stage, n_reused_trajs=0, metrics=None):
         #if util.is_toy_dataset(opt): # yes you are toy
-        SYNTAX = f'{opt.problem_name}_lr_{opt.lr}_decay_{opt.lr_gamma}_H_{opt.hidden_nodes}_L_{opt.blocks}_B_{opt.samp_bs}'
+        SYNTAX = f'{opt.problem_name}_lr_{opt.lr:.1e}_decay_{opt.lr_gamma}_L_{opt.blocks}_B_{opt.samp_bs}'
         if 1:
             _, snapshot, ckpt = util.evaluate_stage(opt, stage, metrics=None)
             if snapshot:
@@ -302,9 +302,11 @@ class Runner():
                     xs, _, _ = self.dyn.sample_traj(self.ts, z, save_traj=True)
 
                     fn = f"{SYNTAX}_stage{stage}-{z.direction}"
+                    '''
                     util.save_toy_npy_traj(
                         opt, fn, xs.detach().cpu().numpy(), n_snapshot=10, direction=z.direction
-                    )
+                    )'''
+                    util.save_toy_npy_traj(opt, fn, xs.detach().cpu().numpy())
 
     def log_sb_alternate_train(self, opt, it, ep, stage, loss, zs, zs_impt, optimizer, direction, num_epoch):
         time_elapsed = util.get_time(time.time()-self.start_time)
@@ -322,15 +324,6 @@ class Runner():
                 util.red("{:+.4f}".format(loss.item())),
                 util.green("{0}:{1:02d}:{2:05.2f}".format(*time_elapsed)),
         ))
-        if opt.log_tb:
-            step = self.update_count(direction)
-            neg_elbo = loss + util.compute_z_norm(zs_impt, self.dyn.dt)
-            self.log_tb(step, loss.detach(), 'loss', 'SB_'+direction) # SB surrogate loss (see Eq 18 & 19 in the paper)
-            self.log_tb(step, neg_elbo.detach(), 'neg_elbo', 'SB_'+direction) # negative ELBO (see Eq 16 in the paper)
-            # if direction == 'forward':
-            #     z_norm = util.compute_z_norm(zs, self.dyn.dt)
-            #     self.log_tb(step, z_norm.detach(), 'z_norm', 'SB_forward')
-
 
     ''' ==============================================================================
         ====================   Ending module of alternative trainig ==================
