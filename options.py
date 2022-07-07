@@ -17,17 +17,33 @@ def get_default_configs():
     config.seed = 999
     config.T = 1.0
     config.interval = 100
-    config.train_method = 'joint'
+    #config.train_method = 'joint'
+    ''' ==============================================================================
+        ===============   Starting module of alternative trainig loss ================
+        ============================================================================== '''
+    config.train_method = 'alternate'
+    config.use_arange_t = True
+    config.num_epoch = 1
+    config.num_stage = 4
+    config.train_bs_x = 1000 # why there is another train_bs_x? figure out why
+    config.sde_type = 'simple'
+    config.train_bs_t = 100
+    config.snapshot_freq = 2
+    ''' ==============================================================================
+        ================   Ending module of alternative trainig loss =================
+        ============================================================================== '''
+
     config.t0 = 0
     #config.problem_name = 'gmm'
-    config.num_itr = 2000
-    config.eval_itr = 200
+    #config.num_itr = 2000 # joint
+    config.num_itr = 100
+    config.eval_itr = 100
     config.forward_net = 'toy'
     config.backward_net = 'toy'
 
     # sampling
     #config.samp_bs = 1000 # cantor server doesn't support large batch size
-    config.samp_bs = 500
+    config.samp_bs = 1000
     config.sigma_min = 0.01
     config.sigma_max = 0.3
 
@@ -35,7 +51,8 @@ def get_default_configs():
     # config.optim = optim = ml_collections.ConfigDict()
     config.weight_decay = 0
     config.optimizer = 'AdamW'
-    config.lr = 4e-3
+    #config.lr = 4e-3
+    config.lr = 1e-4
     config.lr_gamma = 0.8
 
     # network structure
@@ -90,6 +107,17 @@ def set():
     parser.add_argument("--grad-clip",      type=float, default=None,     help="clip the gradient")
     parser.add_argument("--noise-type",     type=str,   default='gaussian', choices=['gaussian','rademacher'], help='choose noise type to approximate Trace term')
 
+    # ---------------- evaluation ----------------
+    parser.add_argument("--FID-freq",       type=int,   default=0,        help="FID frequency w.r.t stages")
+    parser.add_argument("--snapshot-freq",  type=int,   default=0,        help="snapshot frequency w.r.t stages")
+    parser.add_argument("--ckpt-freq",      type=int,   default=0,        help="checkpoint saving frequency w.r.t stages")
+    parser.add_argument("--FID-ckpt",       type=str,   default=None,     help="manually set ckpt path")
+    parser.add_argument("--num-FID-sample", type=int,   default=10000,    help="number of sample for computing FID")
+    parser.add_argument("--compute-FID",    action="store_true",          help="flag: evaluate FID")
+    parser.add_argument("--compute-NLL",    action="store_true",          help="flag: evaluate NLL")
+
+
+
     problem_name = parser.parse_args().problem_name
     default_config, model_configs = {
         'toy':          get_default_configs,
@@ -120,6 +148,15 @@ def set():
     opt.model_configs = model_configs
     if opt.lr is not None:
         opt.lr_f, opt.lr_b = opt.lr, opt.lr
+
+    if opt.use_arange_t and opt.train_bs_t != opt.interval:
+        print('[warning] reset opt.train_bs_t to {} since use_arange_t is enabled'.format(opt.interval))
+        opt.train_bs_t = opt.interval
+
+    #if opt.snapshot_freq:
+    #    opt.eval_path = os.path.join('results', opt.dir)
+    #    os.makedirs(os.path.join(opt.eval_path, 'forward'), exist_ok=True)
+    #    os.makedirs(os.path.join(opt.eval_path, 'backward'), exist_ok=True)
 
     # ========= print options =========
     for o in vars(opt):

@@ -84,3 +84,22 @@ def save_toy_npy_traj(opt, fn, traj, n_snapshot=None, direction=None):
     plt.savefig(fn_pdf)
     np.save(fn_npy, traj)
     plt.clf()
+
+
+
+def evaluate_stage(opt, stage, metrics):
+    """ Determine what metrics to evaluate for the current stage,
+    if metrics is None, use the frequency in opt to decide it.
+    """
+    if metrics is not None:
+        return [k in metrics for k in ['FID', 'snapshot', 'ckpt']]
+    match = lambda freq: (freq>0 and stage%freq==0)
+    return [match(opt.FID_freq), match(opt.snapshot_freq), match(opt.ckpt_freq)]
+
+
+def compute_z_norm(zs, dt):
+    # Given zs.shape = [batch, timesteps, *z_dim], return E[\int 0.5*norm(z)*dt],
+    # where the norm is taken over z_dim, the integral is taken over timesteps,
+    # and the expectation is taken over batch.
+    zs = zs.reshape(*zs.shape[:2],-1)
+    return 0.5 * zs.norm(dim=2).sum(dim=1).mean(dim=0) * dt

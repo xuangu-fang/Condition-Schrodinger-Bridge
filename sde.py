@@ -15,8 +15,8 @@ def build(opt, p, q):
 
     return {
         've': VESDE,
+        'simple': SimpleSDE,
     }.get(opt.sde_type)(opt, p, q)
-
 
 class BaseSDE(metaclass=abc.ABCMeta):
     def __init__(self, opt, p, q):
@@ -87,7 +87,19 @@ class BaseSDE(metaclass=abc.ABCMeta):
 
         res = [xs, zs, x_term]
         return res
-    
+
+class SimpleSDE(BaseSDE):
+    def __init__(self, opt, p, q, var=1.0):
+        super(SimpleSDE, self).__init__(opt, p, q)
+        self.var = var
+
+    def _f(self, x, t):
+        return torch.zeros_like(x)
+
+    def _g(self, t):
+        return torch.Tensor([self.var])
+
+
 """ default setups """
 class VESDE(BaseSDE):
     def __init__(self, opt, p, q):
