@@ -24,7 +24,7 @@ def build_boundary_distribution(opt):
     return pdata, prior
 
 def build_prior_sampler(opt, batch_size):
-    if opt.problem_name == 'moon-to-spiral':
+    if opt.problem_name == 'Scurve2Spiral':
         # uses Scurve as prior distribution to connect two complex distributions
         return Scurve(batch_size)
     prior = td.MultivariateNormal(torch.zeros(opt.data_dim), torch.eye(opt.data_dim[-1]))
