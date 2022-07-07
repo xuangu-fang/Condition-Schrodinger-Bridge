@@ -302,11 +302,10 @@ class Runner():
                     xs, _, _ = self.dyn.sample_traj(self.ts, z, save_traj=True)
 
                     fn = f"{SYNTAX}_stage{stage}-{z.direction}"
-                    '''
                     util.save_toy_npy_traj(
-                        opt, fn, xs.detach().cpu().numpy(), n_snapshot=10, direction=z.direction
-                    )'''
-                    util.save_toy_npy_traj(opt, fn, xs.detach().cpu().numpy())
+                        opt, fn, xs.detach().cpu().numpy(), n_snapshot=15, direction=z.direction
+                    )
+                    #util.save_toy_npy_traj(opt, fn, xs.detach().cpu().numpy())
 
     def log_sb_alternate_train(self, opt, it, ep, stage, loss, zs, zs_impt, optimizer, direction, num_epoch):
         time_elapsed = util.get_time(time.time()-self.start_time)
