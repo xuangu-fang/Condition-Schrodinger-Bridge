@@ -24,7 +24,7 @@ def get_default_configs():
     config.train_method = 'alternate'
     config.use_arange_t = True
     config.num_epoch = 1
-    config.num_stage = 8
+    config.num_stage = 10
     config.train_bs_x = 1000 # why there is another train_bs_x? figure out why
     config.sde_type = 'simple'
     config.train_bs_t = 100

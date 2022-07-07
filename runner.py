@@ -293,7 +293,7 @@ class Runner():
     @torch.no_grad()
     def evaluate(self, opt, stage, n_reused_trajs=0, metrics=None):
         #if util.is_toy_dataset(opt): # yes you are toy
-        SYNTAX = f'{opt.problem_name}_lr_{opt.lr:.0e}_{opt.lr_gamma}_L_{opt.blocks}_B_{opt.samp_bs}'
+        SYNTAX = f'{opt.problem_name}_lr_{opt.lr:.0e}_{opt.lr_gamma}_L_{opt.blocks}_B_{opt.samp_bs}_e_{opt.num_itr}'
         if 1:
             _, snapshot, ckpt = util.evaluate_stage(opt, stage, metrics=None)
             if snapshot:

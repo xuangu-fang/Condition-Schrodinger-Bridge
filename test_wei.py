@@ -5,7 +5,7 @@ import argparse
 
 parser = argparse.ArgumentParser(description='Grid search')
 parser.add_argument('-id', default=1, type=int, help='problem id')
-parser.add_argument('-sn', default=10, type=int, help='Sampling Epochs')
+parser.add_argument('-sn', default=200, type=int, help='Sampling Epochs')
 parser.add_argument('-lr', default=5e-4, type=float, help='learning rate')
 parser.add_argument('-lr_gamma', default=0.8, type=float, help='learning rate')
 parser.add_argument('-node', default=128, type=int, help='node')
