@@ -24,12 +24,12 @@ def get_default_configs():
     config.train_method = 'alternate'
     config.use_arange_t = True
     config.num_epoch = 1
-    config.num_stage = 8
+    config.num_stage = 80
     config.train_bs_x = 1000 # why there is another train_bs_x? figure out why
     #config.sde_type = 'simple'
     config.sde_type = 've'
     config.train_bs_t = 100
-    config.snapshot_freq = 2
+    config.snapshot_freq = 10
     ''' ==============================================================================
         ================   Ending module of alternative trainig loss =================
         ============================================================================== '''
@@ -37,7 +37,7 @@ def get_default_configs():
     config.t0 = 0
     #config.problem_name = 'gmm'
     #config.num_itr = 2000 # joint
-    config.num_itr = 250
+    config.num_itr = 25
     config.eval_itr = 250
     config.forward_net = 'toy'
     config.backward_net = 'toy'
