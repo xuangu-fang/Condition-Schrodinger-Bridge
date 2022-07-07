@@ -46,7 +46,7 @@ def get_default_configs():
     #config.samp_bs = 1000 # cantor server doesn't support large batch size
     config.samp_bs = 1000
     config.sigma_min = 0.01
-    config.sigma_max = 0.3
+    config.sigma_max = 0.05
 
     # optimization
     # config.optim = optim = ml_collections.ConfigDict()
