@@ -29,7 +29,7 @@ def get_default_configs():
     #config.sde_type = 'simple'
     config.sde_type = 've'
     config.train_bs_t = 100
-    config.snapshot_freq = 10
+    config.snapshot_freq = 20
     ''' ==============================================================================
         ================   Ending module of alternative trainig loss =================
         ============================================================================== '''
