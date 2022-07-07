@@ -293,6 +293,7 @@ class Runner():
     @torch.no_grad()
     def evaluate(self, opt, stage, n_reused_trajs=0, metrics=None):
         #if util.is_toy_dataset(opt): # yes you are toy
+        SYNTAX = f'{opt.problem_name}_lr_{opt.lr}_decay_{opt.lr_gamma}_H_{opt.hidden_nodes}_L_{opt.blocks}_B_{opt.samp_bs}'
         if 1:
             _, snapshot, ckpt = util.evaluate_stage(opt, stage, metrics=None)
             if snapshot:
@@ -300,9 +301,9 @@ class Runner():
                     z = freeze_policy(z)
                     xs, _, _ = self.dyn.sample_traj(self.ts, z, save_traj=True)
 
-                    fn = "stage{}-{}".format(stage, z.direction)
+                    fn = f"{SYNTAX}_stage{stage}-{z.direction}"
                     util.save_toy_npy_traj(
-                        opt, fn, xs.detach().cpu().numpy(), n_snapshot=5, direction=z.direction
+                        opt, fn, xs.detach().cpu().numpy(), n_snapshot=10, direction=z.direction
                     )
 
     def log_sb_alternate_train(self, opt, it, ep, stage, loss, zs, zs_impt, optimizer, direction, num_epoch):
