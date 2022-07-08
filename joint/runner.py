@@ -115,14 +115,6 @@ class Runner():
         self.z_b = policy.build(opt, self.dyn, 'backward') # q -> p
         self.optimizer_f, self.ema_f, self.sched_f = build_optimizer_ema_sched(opt, self.z_f)
         self.optimizer_b, self.ema_b, self.sched_b = build_optimizer_ema_sched(opt, self.z_b)
-        if opt.load:
-            util.restore_checkpoint(opt, self, opt.load)
-        if opt.log_tb: # tensorboard related things
-            self.it_f = 0
-            self.it_b = 0
-            self.writer=SummaryWriter(
-                log_dir=os.path.join('runs', opt.log_fn) if opt.log_fn is not None else None
-            )
 
 
     def update_count(self, direction):
