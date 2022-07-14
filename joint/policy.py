@@ -5,7 +5,7 @@ import util
 
 from ipdb import set_trace as debug
 
-from models.toy_model.Toy import ToyPolicy
+from models.toy_model.Toy import ToyPolicy, ToyPolicy_condi
 
 def build(opt, dyn, direction):
     print(util.magenta("build {} policy...".format(direction)))
@@ -26,7 +26,11 @@ def build(opt, dyn, direction):
 
 def _build_net(opt, net_name):
     compute_sigma = lambda t: sde.compute_sigmas(t, opt.sigma_min, opt.sigma_max)
-    net = ToyPolicy(hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
+
+    if opt.condition:
+        net = ToyPolicy_condi(hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
+    else:
+        net = ToyPolicy(hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
     return net
 
 class SchrodingerBridgePolicy(torch.nn.Module):
@@ -44,6 +48,9 @@ class SchrodingerBridgePolicy(torch.nn.Module):
     def zero_out_last_layer(self):
         return self.net.zero_out_last_layer
 
+    def set_x_condi(self, x_condi):
+        self.net.x_condi = x_condi
+
 
     def forward(self, x, t):
         # make sure t.shape = [batch]
@@ -54,7 +61,11 @@ class SchrodingerBridgePolicy(torch.nn.Module):
         if self.use_t_idx:
             t = t / self.opt.T * self.opt.interval
 
+        # out = self.net(x, t)
+        # feed mask_condi 
+        
         out = self.net(x, t)
+
 
         # if the SB policy behaves as "Z" in FBSDE system,
         # the output should be scaled by the diffusion coefficient "g".

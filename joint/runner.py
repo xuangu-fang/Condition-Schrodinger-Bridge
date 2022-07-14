@@ -91,9 +91,23 @@ def compute_sb_nll_joint_train(opt, batch_x, dyn, ts, xs_f, zs_f, x_term_f, poli
     assert policy_b.direction == 'backward'
     assert xs_f.requires_grad and zs_f.requires_grad and x_term_f.requires_grad
 
+
+    if opt.condition:
+        # fang: should ask mask here, only x_target counts for loss 
+        # mask_target, idx_target are attributes of dyn (sde class)
+        mask_target_repeat = dyn.mask_target.repeat(opt.interval,1)
+
+        xs_f = torch.mul(xs_f,mask_target_repeat)
+
+        x_term_f = x_term_f[dyn.idx_target,:]
+
+
     div_gz_b, zs_b = compute_div_gz(opt, dyn, ts, xs_f, policy_b, return_zs=True)
 
-    loss = 0.5*(zs_f + zs_b)**2 + div_gz_b
+    loss = 0.5*(zs_f + zs_b)**2 + div_gz_b 
+
+    loss = torch.mul(loss,mask_target_repeat)
+
     """ loss so far is of shape [batch x time steps, 2]' """
     """ Wei: dyn.dt is a scalar of 0.01; batch_x is scaler of 512"""
     loss = torch.sum(loss*dyn.dt) / batch_x
@@ -106,7 +120,7 @@ class Runner():
 
         self.start_time = time.time()
 
-        self.ts = torch.linspace(opt.t0, opt.T, opt.interval)
+        self.ts = torch.linspace(opt.t0, opt.T, opt.interval).to(opt.device)
         # build boundary distribution (p: target, q: prior)
         self.p, self.q = data.build_boundary_distribution(opt)
         # build dynamics, forward (z_f) and backward (z_b) policies
@@ -149,13 +163,34 @@ class Runner():
 
             optimizer_f.zero_grad()
             optimizer_b.zero_grad()
-            xs_f, zs_f, x_term_f = self.dyn.sample_traj(ts, policy_f, save_traj=True)
-            xs_f = util.flatten_dim01(xs_f)
-            zs_f = util.flatten_dim01(zs_f)
-            _ts = ts.repeat(batch_x)
-            loss = compute_sb_nll_joint_train(
-                opt, batch_x, self.dyn, _ts, xs_f, zs_f, x_term_f, policy_b
-            )
+
+            # fang: for condition case, try avg over the sampling conti/target
+            INNER_ITER = opt.inner_itr if opt.condition else 1
+            
+            loss = 0
+            for inner_it in range(INNER_ITER):
+
+                update_mask_flag = (it % opt.mask_update_itr ==0)
+
+                xs_f, zs_f, x_term_f = self.dyn.sample_traj(ts, policy_f, save_traj=True,update_mask = update_mask_flag)
+
+                # fang: the x_condi is set for forward-z nn during the sample_traj
+                # we set it for backward-b nn here manuly 
+                if opt.condition:
+                    policy_b.net.set_x_condi(self.dyn.x_condi.repeat(opt.interval,1))
+
+                xs_f = util.flatten_dim01(xs_f).to(opt.device)
+                zs_f = util.flatten_dim01(zs_f).to(opt.device)
+                x_term_f = x_term_f.to(opt.device)
+                _ts = ts.repeat(batch_x).to(opt.device)
+
+                loss = compute_sb_nll_joint_train(
+                    opt, batch_x, self.dyn, _ts, xs_f, zs_f, x_term_f, policy_b
+                ) + loss
+
+                
+
+            loss = loss/INNER_ITER
             loss.backward()
             optimizer_f.step()
             optimizer_b.step()
@@ -164,12 +199,12 @@ class Runner():
             if sched_b is not None: sched_b.step()
             self.log_sb_joint_train(opt, it, loss, optimizer_f, opt.num_itr)
             # evaluate
-            if (it + 1) % opt.eval_itr == 0:
-                with torch.no_grad():
-                    xs_b, _, _ = self.dyn.sample_traj(ts, policy_b, save_traj=True)
-                util.save_toy_npy_traj(opt, f'{SYNTAX}_it{it+1}', xs_b.detach().cpu().numpy())
-        with open(f'./results/{SYNTAX}_baseline.npy', 'wb') as f:
-            np.save(f, self.p.samples)
+        #     if (it + 1) % opt.eval_itr == 0:
+        #         with torch.no_grad():
+        #             xs_b, _, _ = self.dyn.sample_traj(ts, policy_b, save_traj=True)
+        #         util.save_toy_npy_traj(opt, f'{SYNTAX}_it{it+1}', xs_b.detach().cpu().numpy())
+        # with open(f'./results/{SYNTAX}_baseline.npy', 'wb') as f:
+        #     np.save(f, self.p.samples)
 
     def _print_train_itr(self, it, loss, optimizer, num_itr, name):
         time_elapsed = util.get_time(time.time()-self.start_time)
@@ -189,7 +224,7 @@ class Runner():
 
 print(util.yellow("     Likelihood-Training of Schrodinger Bridge"))
 print(util.magenta("setting configurations..."))
-opt = options.set()
+# opt = options.set()
 
 def main(opt):
     run = Runner(opt)

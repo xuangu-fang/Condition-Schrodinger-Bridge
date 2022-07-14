@@ -25,6 +25,13 @@ class BaseSDE(metaclass=abc.ABCMeta):
         self.p = p # data distribution
         self.q = q # prior distribution
 
+        self.x_condi = None # set/update only when sample from p (forward) 
+        self.mask_target = None # set/update only when sample from p (forward) 
+        self.idx_target = None
+        self.idx_condi = None # set/update only when sample frome
+
+
+
     @abc.abstractmethod
     def _f(self, x, t):
         raise NotImplementedError
@@ -52,7 +59,7 @@ class BaseSDE(metaclass=abc.ABCMeta):
 
         return x + (f + g*z)*dt + g*dw
 
-    def sample_traj(self, ts, policy, corrector=None, apply_trick=True, save_traj=True):
+    def sample_traj(self, ts, policy, corrector=None, apply_trick=True, save_traj=True, update_mask = False):
 
         # first we need to know whether we're doing forward or backward sampling
         opt = self.opt
@@ -61,9 +68,31 @@ class BaseSDE(metaclass=abc.ABCMeta):
 
         # set up ts and init_distribution
         _assert_increasing('ts', ts)
-        init_dist = self.p if direction=='forward' else self.q
-        ts = ts if direction=='forward' else torch.flip(ts, dims=[0])
-        x = init_dist.sample() # [bs, x_dim]
+        # init_dist = self.p if direction=='forward' else self.q
+        # ts = ts if direction=='forward' else torch.flip(ts, dims=[0])
+        # x= init_dist.sample() # [bs, x_dim]
+
+        if direction=='forward':
+            init_dist = self.p
+            ts = ts
+
+            # if it's a condi-dist, 
+            # we also update its x_condi and mask_target during the sampling
+
+            x = init_dist.sample(update_mask) 
+
+            if hasattr(init_dist, 'x_condi') and hasattr(init_dist, 'mask_target'):
+                self.x_condi = init_dist.x_condi
+                self.mask_target = init_dist.mask_target
+                self.idx_target = init_dist.idx_target
+                self.idx_condi = init_dist.idx_condi
+
+        else:
+            init_dist = self.q
+            ts = torch.flip(ts, dims=[0])
+            x = init_dist.sample()
+
+        policy.net.set_x_condi(self.x_condi)
 
         xs = torch.empty((x.shape[0], len(ts), *x.shape[1:])) if save_traj else None
         zs = torch.empty_like(xs) if save_traj else None

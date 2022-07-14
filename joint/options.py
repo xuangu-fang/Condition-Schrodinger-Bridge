@@ -48,7 +48,7 @@ def get_default_configs():
 def set():
     # --------------- basic ---------------
     parser = argparse.ArgumentParser()
-    parser.add_argument("--problem-name",   type=str)
+    parser.add_argument("--problem-name",   type=str,   default='Scurve')
     parser.add_argument("--seed",           type=int,   default=0)
     parser.add_argument("--gpu",            type=int,   default=0,        help="GPU device")
     parser.add_argument("--load",           type=str,   default=None,     help="load the checkpoints")
@@ -63,8 +63,8 @@ def set():
     parser.add_argument("--t0",             type=float, default=1e-2,     help="time integral start time")
     parser.add_argument("--T",              type=float, default=1.,       help="time integral end time")
     parser.add_argument("--interval",       type=int,   default=100,      help="number of interval")
-    parser.add_argument("--forward-net",    type=str,   choices=['toy','Unet','ncsnpp'], help="model class of forward nonlinear drift")
-    parser.add_argument("--backward-net",   type=str,   choices=['toy','Unet','ncsnpp'], help="model class of backward nonlinear drift")
+    parser.add_argument("--forward-net",    type=str,   default='toy', choices=['toy','Unet','ncsnpp'], help="model class of forward nonlinear drift")
+    parser.add_argument("--backward-net",   type=str,   default='toy', choices=['toy','Unet','ncsnpp'], help="model class of backward nonlinear drift")
     parser.add_argument("--sde-type",       type=str,   default='ve', choices=['ve', 'vp', 'simple'])
     parser.add_argument("--sigma-max",      type=float, default=50,       help="max diffusion for VESDE")
     parser.add_argument("--sigma-min",      type=float, default=0.01,     help="min diffusion for VESDE")
