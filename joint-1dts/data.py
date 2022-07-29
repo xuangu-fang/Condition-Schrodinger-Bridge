@@ -19,20 +19,21 @@ def build_boundary_distribution(opt):
 
     # opt.data_dim = [2]
     prior = build_prior_sampler(opt, opt.samp_bs)
-    pdata = build_data_sampler(opt, opt.samp_bs)
+    pdata = build_data_sampler(opt)
 
     return pdata, prior
 
 def build_prior_sampler(opt, batch_size):
-    prior = td.MultivariateNormal(torch.zeros(opt.data_dim).to(opt.device), torch.eye(opt.data_dim[-1]).to(opt.device))
+    cov_coef = 0.5
+    prior = td.MultivariateNormal(torch.zeros(opt.data_dim).to(opt.device), cov_coef*torch.eye(opt.data_dim[-1]).to(opt.device))
     return PriorSampler(prior, batch_size, opt.device)
 
-def build_data_sampler(opt, batch_size):
+def build_data_sampler(opt):
     return {
             'Scurve': Scurve,
             'Sin':Sin,
             'Scurve_condi':Scurve_condi
-        }.get(opt.problem_name)(batch_size,opt.device)
+        }.get(opt.problem_name)(opt)
 
 
 def normalize(xs):
@@ -45,10 +46,10 @@ def normalize_both(xs):
 
 """ motivated by GP-Sinkhorn's code """
 class Scurve:
-    def __init__(self, batch_size, device):
-        self.batch_size = batch_size
+    def __init__(self, opt):
+        self.batch_size = opt.samp_bs
         self.samples = normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]])
-        self.device = device
+        self.device = opt.device
     def sample(self):
         return torch.Tensor(self.samples).to(self.device)
 
@@ -56,17 +57,17 @@ def _make_sin(batch,L = 50):
     x = np.linspace(0,1,L)
     y = np.sin(x*2*np.pi)
     y = y.reshape(1,-1).repeat(batch,0) 
-    y = y + np.random.randn(*y.shape) * 0.1
+    y = y + np.random.randn(*y.shape) * 0.001
 
     return x,y
 
 
 class Sin:
-    def __init__(self, batch_size, device):
-        self.batch_size = batch_size
+    def __init__(self, opt):
+        self.batch_size = opt.samp_bs
         # self.samples = normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]])
-        _, self.samples = _make_sin(batch_size)
-        self.device = device
+        _, self.samples = _make_sin(self.batch_size,opt.data_dim[0])
+        self.device = opt.device
     def sample(self):
         return torch.Tensor(self.samples).to(self.device)
 

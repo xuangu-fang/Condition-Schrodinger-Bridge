@@ -6,6 +6,7 @@ import util
 from ipdb import set_trace as debug
 
 from models.toy_model.Toy import ToyPolicy, ToyPolicy_condi
+from models.TS_Transfomer_1d import Trans_1d
 
 def build(opt, dyn, direction):
     print(util.magenta("build {} policy...".format(direction)))
@@ -29,8 +30,11 @@ def _build_net(opt, net_name):
 
     if opt.condition:
         net = ToyPolicy_condi(data_dim=opt.data_dim[0],hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
+    elif opt.problem_name == 'Sin':
+        net = Trans_1d(opt,inputdim=1)
     else:
         net = ToyPolicy(data_dim=opt.data_dim[0],hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
+
     return net
 
 class SchrodingerBridgePolicy(torch.nn.Module):
@@ -61,9 +65,6 @@ class SchrodingerBridgePolicy(torch.nn.Module):
         if self.use_t_idx:
             t = t / self.opt.T * self.opt.interval
 
-        # out = self.net(x, t)
-        # feed mask_condi 
-        
         out = self.net(x, t)
 
 
