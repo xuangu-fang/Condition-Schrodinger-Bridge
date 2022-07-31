@@ -87,8 +87,6 @@ class BaseSDE(metaclass=abc.ABCMeta):
                 x = init_dist.sample(update_mask) 
                 self.x_condi = init_dist.x_condi
                 self.mask_target = init_dist.mask_target
-                self.idx_target = init_dist.idx_target
-                self.idx_condi = init_dist.idx_condi
                 self.mask_train = 1-torch.Tensor(init_dist.mask_test).to(opt.device)
             else:
                 x = init_dist.sample()

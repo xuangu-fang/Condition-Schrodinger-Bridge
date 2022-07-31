@@ -95,14 +95,18 @@ def compute_sb_nll_joint_train(opt, batch_x, dyn, ts, xs_f, zs_f, x_term_f, poli
     if opt.condition:
         # fang: should ask mask here, only x_target counts for loss 
         # mask_target, idx_target are attributes of dyn (sde class)
+
         final_mask = torch.mul(dyn.mask_target,dyn.mask_train)
 
-        mask_target_repeat = final_mask.repeat(opt.interval,1)
+        # final_mask = dyn.mask_target
+        mask_target_repeat = final_mask.unsqueeze(1).repeat(1,opt.interval,1)
+        mask_target_repeat = util.flatten_dim01(mask_target_repeat).to(opt.device) 
+        # mask_target_repeat = final_mask.repeat(opt.interval,1)
 
-        # fang: should ask mask here?
+        # fang: should ask mask here?-no 
         # xs_f = torch.mul(xs_f,mask_target_repeat)
 
-        x_term_f = x_term_f[dyn.idx_target,:]
+        # x_term_f = x_term_f[dyn.idx_target,:]
 
 
     div_gz_b, zs_b = compute_div_gz(opt, dyn, ts, xs_f, policy_b, return_zs=True)
@@ -110,7 +114,9 @@ def compute_sb_nll_joint_train(opt, batch_x, dyn, ts, xs_f, zs_f, x_term_f, poli
     loss = 0.5*(zs_f + zs_b)**2 + div_gz_b
      
     if opt.condition:
+        # pass
         loss = torch.mul(loss,mask_target_repeat)
+        
 
     """ loss so far is of shape [batch x time steps, 2]' """
     """ Wei: dyn.dt is a scalar of 0.01; batch_x is scaler of 512"""
@@ -181,7 +187,11 @@ class Runner():
                 # fang: the x_condi is set for forward-z nn during the sample_traj
                 # we set it for backward-b nn here manuly 
                 if opt.condition:
-                    policy_b.net.set_x_condi(self.dyn.x_condi.repeat(opt.interval,1))
+
+                    x_condi_repeat  =self.dyn.x_condi.unsqueeze(1).repeat(1,opt.interval,1)
+                    x_condi_repeat = util.flatten_dim01(x_condi_repeat)
+                    
+                    policy_b.net.set_x_condi(x_condi_repeat)
 
                 xs_f = util.flatten_dim01(xs_f).to(opt.device)
                 zs_f = util.flatten_dim01(zs_f).to(opt.device)

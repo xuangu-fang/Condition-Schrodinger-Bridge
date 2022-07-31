@@ -35,7 +35,7 @@ class Trans_1d(nn.Module):
 
         hid = opt.hidden_nodes
 
-        self.time_embed_dim = hid // 2
+        self.time_embed_dim = hid //2
 
         self.t_module = nn.Sequential(
             nn.Linear(self.time_embed_dim, hid),
@@ -43,7 +43,6 @@ class Trans_1d(nn.Module):
             nn.Linear(hid, opt.data_dim[0]),
         )
 
-        
         self.pos_emb = self._build_embedding(opt.data_dim[0],self.time_embed_dim//2).unsqueeze(0) # (1,L,time_embed)
 
         self.pos_module = nn.Sequential(
@@ -55,33 +54,17 @@ class Trans_1d(nn.Module):
         self.input_projection = Conv1d_with_init(inputdim, self.channels, 1)
         # self.position_projection = Conv1d_with_init(inputdim, self.channels, 1)
 
-        # self.output_projection1 = Conv1d_with_init(self.channels, self.channels, 1)
+        self.output_projection1 = Conv1d_with_init(self.channels, self.channels, 1)
         self.output_projection2 = Conv1d_with_init(self.channels, 1, 1)
         # nn.init.zeros_(self.output_projection2.weight)
 
-        self.transforms_layer = get_torch_trans(heads=opt.nheads, layers=1, channels=opt.channels)
+        self.transforms_layer = get_torch_trans(heads=opt.nheads, layers=opt.trans_layers, channels=opt.channels)
         
-
-
         self.out_module = nn.Sequential(
                     nn.Linear(opt.data_dim[0],hid),
                     SiLU(),
                 nn.Linear(hid, opt.data_dim[0]),
                         )
-
-
-        # fang: set the condi_info as the class attributes
-        self.x_condi = None
-
-        # fang: set the side_info as the class attributes
-        self.side_info = None
-
-    def set_x_condi(self,x_condi):
-        self.x_condi = x_condi
-
-    def set_side_info(self, observed_tp, cond_mask):
-        # self.side_info = self.get_side_info( observed_tp, cond_mask)
-        pass
 
     def _build_embedding(self, num_steps, dim=64):
         steps = torch.arange(num_steps).unsqueeze(1)  # (T,1)
@@ -97,8 +80,10 @@ class Trans_1d(nn.Module):
         
         B = x.shape[0]
 
-        pos_emb = self.pos_emb.repeat(B,1,1)# (B,L,pos_emb)
-        pos_emb = self.pos_module(pos_emb)# (B,L,C)
+        
+        pos_emb = self.pos_module(self.pos_emb)# (1,L,C)
+        # pos_emb = pos_emb.repeat(B,1,1)# (B,L,pos_emb)
+
 
         t_emb = timestep_embedding(t, self.time_embed_dim)
         t_out = self.t_module(t_emb) # (B,L)
@@ -107,13 +92,114 @@ class Trans_1d(nn.Module):
         
         x = self.input_projection(x.unsqueeze(1)) # (B,L)->(B,1,L)->(B,C,L)
 
-        x = x.permute(0,2,1)# (B,C,L)-># (B,L,C)
+        x_silu = F.silu(x)# (B,C,L)
+
+        x = x_silu.permute(0,2,1)#(B,C,L)-># (B,L,C)
 
         x = self.transforms_layer(x + pos_emb) # (B,L,C)->(B,L,C)
 
         x = x.permute(0,2,1)  # (B,L,C)->(B,C,L)
 
         x = x + t_out# (B,L,C)
+        
+        x = self.output_projection1(x)# (B,C,L)->(B,C,L)
+
+        x = self.output_projection2(x + x_silu).squeeze()# (B,C,L)->(B,1,L)->(B,L)
+        
+        # out = self.out_module(x+ t_out)
+        out = x
+
+        return out
+
+class Trans_1d_condi(Trans_1d):
+    def __init__(self, opt, inputdim=2):
+        super(Trans_1d_condi,self).__init__(opt, inputdim)
+
+        # fang: set the condi_info as the class attributes
+        self.x_condi = None
+
+        # fang: set the side_info as the class attributes
+        self.side_info = None
+
+    def set_x_condi(self,x_condi):
+        self.x_condi = x_condi
+
+    def set_side_info(self, observed_tp, cond_mask):
+        # self.side_info = self.get_side_info( observed_tp, cond_mask)
+        pass
+    # def forward(self, x, t):
+    #     # make sure t.shape = [T]
+    #     if len(t.shape)==0:
+    #         t=t[None]
+        
+    #     B = x.shape[0]
+
+        
+    #     pos_emb = self.pos_module(self.pos_emb)# (1,L,C)
+    #     pos_emb = pos_emb.repeat(B,1,1)# (B,L,pos_emb)
+
+
+    #     t_emb = timestep_embedding(t, self.time_embed_dim)
+    #     t_out = self.t_module(t_emb) # (B,L)
+    #     t_out = t_out.unsqueeze(1).repeat(1,self.channels,1) # (B,C,L)
+
+    #     '''diff from the non-conditional case, add the x_condi here'''
+    #     x = torch.stack([x,self.x_condi],1) # (B,L) x (B,L) ->(B,2,L)
+    #     x = self.input_projection(x)# (B,2,L)->(B,C,L)
+
+    #     # x = self.input_projection(x.unsqueeze(1)) # (B,L)->(B,1,L)->(B,C,L)
+
+    #     x_silu = F.silu(x)# (B,C,L)
+
+    #     x = x_silu.permute(0,2,1)#(B,C,L)-># (B,L,C)
+
+    #     x = self.transforms_layer(x + pos_emb) # (B,L,C)->(B,L,C)
+
+    #     x = x.permute(0,2,1)  # (B,L,C)->(B,C,L)
+
+    #     x = x + t_out# (B,L,C)
+        
+    #     x = self.output_projection1(x)# (B,C,L)->(B,C,L)
+
+    #     x = self.output_projection2(x + x_silu).squeeze()# (B,C,L)->(B,1,L)->(B,L)
+        
+    #     # out = self.out_module(x+ t_out)
+    #     out = x
+
+    #     return out
+
+    def forward(self, x, t):
+        # make sure t.shape = [T]
+        if len(t.shape)==0:
+            t=t[None]
+        
+        B = x.shape[0]
+
+        # fang this fature may be merged as "side_info"
+        pos_emb = self.pos_module(self.pos_emb)# (1,L,C)
+        pos_emb = pos_emb.repeat(B,1,1)# (B,L,C)
+
+
+        t_emb = timestep_embedding(t, self.time_embed_dim)
+        t_out = self.t_module(t_emb) # (B,L)
+        t_out = t_out.unsqueeze(1).repeat(1,self.channels,1) # (B,C,L)
+
+        '''diff from the non-conditional case, add the x_condi here'''
+        x = torch.stack([x,self.x_condi],1) # (B,L) x (B,L) ->(B,2,L)
+        # x = torch.stack([x,x],1) # (B,L) x (B,L) ->(B,2,L)
+
+        x = self.input_projection(x) # (B,2,L)->(B,C,L)
+
+        x = x.permute(0,2,1)# (B,C,L)-># (B,L,C)
+
+        x = self.transforms_layer(x + pos_emb + t_out.permute(0,2,1)) # (B,L,C)->(B,L,C)
+
+        x = x.permute(0,2,1)  # (B,L,C)->(B,C,L)
+
+        x = x #+ pos_emb.permute(0,2,1)#+ t_out# (B,C,L)
+
+        # x = self.output_projection1(x)# (B,C,L)->(B,C,L)
+        # x = torch.sigmoid(x)
 
         x = self.output_projection2(x).squeeze()# (B,C,L)->(B,1,L)->(B,L)
         
@@ -121,3 +207,4 @@ class Trans_1d(nn.Module):
         out = x
 
         return out
+

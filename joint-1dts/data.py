@@ -24,7 +24,7 @@ def build_boundary_distribution(opt):
     return pdata, prior
 
 def build_prior_sampler(opt, batch_size):
-    cov_coef = 0.5
+    cov_coef = 1
     prior = td.MultivariateNormal(torch.zeros(opt.data_dim).to(opt.device), cov_coef*torch.eye(opt.data_dim[-1]).to(opt.device))
     return PriorSampler(prior, batch_size, opt.device)
 
@@ -32,7 +32,7 @@ def build_data_sampler(opt):
     return {
             'Scurve': Scurve,
             'Sin':Sin,
-            'Scurve_condi':Scurve_condi
+            'Sin-Condi':Sin_condi
         }.get(opt.problem_name)(opt)
 
 
@@ -71,32 +71,21 @@ class Sin:
     def sample(self):
         return torch.Tensor(self.samples).to(self.device)
 
-""" Scurve_condi"""
-class Scurve_condi:
-    def __init__(self, batch_size, device,mask_ratio=0.1):
-        self.batch_size = batch_size
-        self.device = device
-        # self.samples = normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]])
+class Sin_condi:
+    def __init__(self, opt):
+        self.opt = opt
+        self.batch_size = opt.samp_bs
+        _, self.data = _make_sin(1,opt.data_dim[0])
+        self.data = self.data.squeeze() # (L)
+        self.device = opt.device
 
-        # right now, just assume we observe all samples of gruonded truth
-
-        # x_obs = normalize(datasets.make_s_curve(n_samples=self.batch_size, noise=0.01)[0][:, [0, 2]])
-        x_obs = normalize(datasets.make_s_curve(n_samples=1000, noise=0.01)[0][:, [0, 2]])
-
-
-        # sort it by y-value, convinient for visulization 
-        sort_arg = np.argsort(x_obs[:,1])
-        new_x = x_obs[sort_arg,:]
-
-
-        self.x_obs = new_x[:self.batch_size,:]
-        self.samples = self.x_obs
-
-        self.mask_ratio = mask_ratio
-        self.num_x_condi= round(self.mask_ratio * self.batch_size)
+        self.mask_ratio = opt.mask_ratio
+        self.data_size = self.opt.data_dim[0]
+        self.num_x_condi= round(self.mask_ratio * self.data_size)
 
         # update when do sampling
         self.x_condi = None
+        self.x_target = None
         self.mask_target = None
 
         # consistent with CSDI data class, to be further set
@@ -107,49 +96,69 @@ class Scurve_condi:
         self.generate_mask_test()
         self.update_mask()
 
-
     def generate_mask_test(self):
         # the training of value at mask_test is always non-acessable for training
-        idx_test =  np.concatenate([np.arange(0,250),np.arange(400,600)])
-        mask_test = np.zeros_like(self.x_obs)
+        # idx_test =  np.concatenate([np.arange(10,13),np.arange(30,33),np.arange(20,23)])
+        idx_test =  np.concatenate([np.arange(20,30)])
+
+        mask_test = np.zeros_like(self.data)
         mask_test[idx_test]=1
 
         self.mask_test = mask_test
-
+        self.mask_obs = 1-self.mask_test
 
     def update_mask(self):
-        ''' for fast test start'''
-        # idx_condi = np.concatenate([np.arange(0,100),np.arange(450,550)])
-        # idx_target =  np.concatenate([np.arange(100,450),np.arange(550,self.batch_size)])
-        # mask_condi = np.zeros_like(self.x_obs)
-        # mask_condi[idx_condi,:]=1
-        # mask_target = 1-mask_condi
+        '''update the mask_condi and mask_target on the obseved(training) data during each sampling'''
 
-        # x_target = np.multiply(self.x_obs,1-mask_condi)
-        # x_condi = np.multiply(self.x_obs,mask_condi)
-        ''' for fast test end'''
-        shuffel_ind = np.random.permutation(self.batch_size)
-        idx_condi = shuffel_ind[:self.num_x_condi]
-        idx_target = shuffel_ind[self.num_x_condi:]
+        x_condi_list = []
+        x_target_list = []
+        
+        mask_condi_list = []
+        mask_target_list = []
 
-        mask_condi = np.zeros_like(self.x_obs)
-        mask_condi[idx_condi,:]=1
+        obseved_tp_list = []
 
-        x_target = np.multiply(self.x_obs,1-mask_condi)
-        x_condi = np.multiply(self.x_obs,mask_condi)
+        for i in range(self.batch_size):
 
-        x_target = np.multiply(x_target,1-self.mask_test)
-        # x_condi = np.multiply(x_condi,1-self.mask_test)
+            shuffel_ind = np.random.permutation(self.data_size)
+            idx_condi = shuffel_ind[:self.num_x_condi]
+            idx_target = shuffel_ind[self.num_x_condi:]
+
+            mask_condi = np.zeros(self.data_size)
+            mask_condi[idx_condi]=1
+
+            # mask_condi = mask_condi.reshape(self.K,self.L)
+            mask_target = 1-mask_condi
+
+            x_target = np.multiply(self.data,mask_target)
+            x_condi = np.multiply(self.data,mask_condi)
+
+            x_condi_list.append(x_condi)
+            x_target_list.append(x_target)
+            mask_condi_list.append(mask_condi)
+            mask_target_list.append(mask_target)
+
+            # fang: for real dataset, here should dependents of sample/sub-sequence
+            # obseved_tp_list.append(self.time_step)
+
+
+
+        x_condi = np.stack(x_condi_list,0) # (B,*)
+        x_target = np.stack(x_target_list,0) # (B,*)
+
+        mask_condi = np.stack(mask_condi_list,0) # (B,*)
+        mask_target = np.stack(mask_target_list,0) # (B,*)
+
+        # obseved_tp = np.stack(obseved_tp_list,0) # (B,L)
+
 
         self.x_condi = torch.Tensor(x_condi).to(self.device)
         self.x_target = torch.Tensor(x_target).to(self.device)
 
-        self.mask_target = torch.Tensor(1-mask_condi).to(self.device)
-        self.idx_target = idx_target
-        self.idx_condi = idx_condi
-
-
-
+        self.mask_condi = torch.Tensor(mask_condi).to(self.device)
+        self.mask_target = torch.Tensor(mask_target).to(self.device)
+        
+        # self.observed_tp = torch.Tensor(obseved_tp).to(self.device)
 
     def sample(self,update=False):
         # when do sampling, we actually sample from the observations, 
@@ -161,8 +170,11 @@ class Scurve_condi:
         else:
             pass
 
+        # _, self.samples = _make_sin(self.batch_size,self.opt.data_dim[0])
+
         return self.x_target
-        # return torch.Tensor(x_target).to(self.device)
+        # return torch.Tensor(self.samples).to(self.device)
+
       
 
 class PriorSampler: # a dump prior sampler to align with DataSampler

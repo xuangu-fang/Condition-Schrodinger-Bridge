@@ -6,7 +6,7 @@ import util
 from ipdb import set_trace as debug
 
 from models.toy_model.Toy import ToyPolicy, ToyPolicy_condi
-from models.TS_Transfomer_1d import Trans_1d
+from models.TS_Transfomer_1d import Trans_1d, Trans_1d_condi
 
 def build(opt, dyn, direction):
     print(util.magenta("build {} policy...".format(direction)))
@@ -28,12 +28,21 @@ def build(opt, dyn, direction):
 def _build_net(opt, net_name):
     compute_sigma = lambda t: sde.compute_sigmas(t, opt.sigma_min, opt.sigma_max)
 
-    if opt.condition:
-        net = ToyPolicy_condi(data_dim=opt.data_dim[0],hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
-    elif opt.problem_name == 'Sin':
+    # if opt.condition:
+    #     net = ToyPolicy_condi(data_dim=opt.data_dim[0],hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
+    # elif opt.problem_name == 'Sin':
+    #     net = Trans_1d(opt,inputdim=1)
+    # elif opt.problem_name == 'Sin-Condi':
+    #     net = Trans_1d_condi(opt,inputdim=1)
+    # else:
+    #     net = ToyPolicy(data_dim=opt.data_dim[0],hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
+
+    if opt.problem_name == 'Sin':
         net = Trans_1d(opt,inputdim=1)
+    elif opt.problem_name == 'Sin-Condi':
+        net = Trans_1d_condi(opt,inputdim=2)
     else:
-        net = ToyPolicy(data_dim=opt.data_dim[0],hidden_dim=opt.hidden_nodes, blocks=opt.blocks)
+        print('error!')
 
     return net
 
